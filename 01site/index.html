@@ -61,7 +61,7 @@
         .sec_2st>.left{float:left;width: 440px;}    
         .sec_2st>.right{float: left;width: 1000px;}
         .sec_2st>.right li{float: left;margin-right: 16px;margin-bottom: 16px;
-        width: 492px;height: 127px;background-color: #f00;}
+        width: 492px;height: 127px}
         .sec_2st>.right li:nth-child(2),
         .sec_2st>.right li:nth-child(4){margin-right: 0px;}
 
@@ -85,7 +85,7 @@
         .button{background-color: #ffffff;font-size:15px;display: inline-block;
         border-radius: 24px;padding: 10px 40px;}
 
-        /* bxslide */
+        /* bxslide 경계선 없애기*/
         .bx-wrapper {
             -moz-box-shadow: 0 0 0 #ccc;
             -webkit-box-shadow: 0 0 0 #ccc;
@@ -93,12 +93,17 @@
             border: 0 none;
        }
 
-       .sec_4th{width: 1440px;margin: 0 auto;}
+       .sec_4th{width: 1400px;margin: 0 auto;}
        .sec_4th>h2{margin-bottom: 40px;}
-       
-       .sec_4th.conItem2>h4{margin-bottom: 20px}
+       .sec_4th>p{margin: 10px 0}
+       .sec_4th>.image2{margin: 10px 0}
+     
+       .sec_4th li{float:left;margin-right: 40px;}
+       .sec_4th li:last-child{margin-right: 0;}
 
-       .sec_4th>p{margin-bottom: 20px 0;}
+       .sec_4th li>p{margin: 10px 0;font-size:16px}
+       .sec_4th li>.date{font-size:14px}
+       .sec_4th li>.image2{margin: 10px 0;}
         
     </style>
     <script>
@@ -206,24 +211,57 @@
                 상담하기
             </div>
         </div>  
-
         </section>
     </div>
 
     <section class="sec_4th py130">
         <h2>가비아 글로벌의 새소식</h2>
-            <div class="image">
-                <img src="images/1.jpeg" alt="">
-            </div>
-            <div class="image2">
-                <img src="images/Frame 28.png" alt="">
-            </div>
-           
+        <ul class="clearfix">
+            <li>
+                <div class="image">
+                    <img src="images/1.jpeg" alt="">
+                </div>
+                <div class="image2">
+                    <img src="images/Frame 28.png" alt="">
+                </div>
+               
+                <p>소상공인 누구나 완판셀러에 도전하세요!</p>
+                <p class="date">2022.04.25.</p>
+            </li>
+            <li>
+                <div class="image">
+                    <img src="images/2.jpeg" alt="">
+                </div>
+                <div class="image2">
+                    <img src="images/Frame 28.png" alt="">
+                </div>
+               
             <p>소상공인 누구나 완판셀러에 도전하세요!</p>
-            <p>2022.04.25.</p>
-                    
-           
-            
+            <p class="date">2022.04.25.</p>
+            </li>
+            <li>
+                <div class="image">
+                    <img src="images/1.jpeg" alt="">
+                </div>
+                <div class="image2">
+                    <img src="images/Frame 28.png" alt="">
+                </div>
+               
+            <p>소상공인 누구나 완판셀러에 도전하세요!</p>
+            <p class="date">2022.04.25.</p>
+            </li>
+            <li>
+                <div class="image">
+                    <img src="images/1.jpeg" alt="">
+                </div>
+                <div class="image2">
+                    <img src="images/Frame 28.png" alt="">
+                </div>
+               
+            <p>소상공인 누구나 완판셀러에 도전하세요!</p>
+            <p class="date">2022.04.25.</p>
+            </li>
+        </ul> 
     </section>
 
     <!-- <style>
