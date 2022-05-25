@@ -34,3 +34,46 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 .menu li a:last-child{border-right: 1px solid #326EAC;}
 .menu li a:hover{background-color: cornflowerblue;
         text-decoration:underline;transition:  0.3s;}
+
+
+.visualWrap{
+        /* background-image: url(../images/main_bg01.jpg);
+        background-repeat: no-repeat;
+        background-position:center;
+        background-color: #213c6b; */
+        background: #213c6b url(../images/main_bg01.jpg) no-repeat 
+        center;}
+
+.visual{width: 980px;height: 400px;margin: 0 auto;
+        position: relative;overflow: hidden;}
+.visual h3{line-height: 80px;font-size: 76.6px;letter-spacing: 0.34em;
+        }
+.visual .txt{position: absolute;top:100px;color:#eff0ee;
+        font-size: 20px;}
+.visual img{position: absolute;right: 0;}
+
+.visualWrap2{background-color: #EEEEEE;}
+.visual2{width: 980px;margin: 0 auto;background-color: antiquewhite;
+        margin-bottom: 50px;}
+.visual2 li{float:left;width: 20%;}
+.visual2 .color1{background-color: #7C99B9;width: 196px;
+        height: 196px;padding: 10px 8px;}
+.visual2 .color2{background-color: #4F74A1;width: 196px;
+        height: 196px;padding: 10px 8px;}
+.visual2 .color3{background-color: #4B8CE0;width: 196px;
+        height: 196px;padding: 10px 8px;}
+.visual2 .color4{background-color: #3DB5F2;width: 196px;
+        height: 196px;padding: 10px 8px;}
+.visual2 .color5{background-color: #95C8FF;width: 196px;
+        height: 196px;padding: 10px 8px;}
+
+.visual2 li img{margin: 0 auto;margin-bottom: 10px;}
+.visual2 li h4{text-align: center;margin-bottom: 10px;
+        color:#fff}
+.visual2 li p{font-size: 14px;text-align: center;margin-bottom: 10px;
+        color: #fff;}
+
+.section{width: 980px;margin: 0 auto;}
+.conItem img{margin-bottom: 20px;}
+.conItem{width: 310px;border:1px solid #666666}
+/* 거터 25PX */
