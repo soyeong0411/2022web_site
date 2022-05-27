@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
-
-/* header  */
 .headerTopWrap{border-bottom: 1px solid #dcdcdc;min-width:980px}
 .headerTop{width: 980px;margin: 0 auto;}
 .topMenu ul{float: right;}
@@ -15,8 +12,8 @@ body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
 .topMenu li a{display: block;padding: 7px 10px;font-size:12px;line-height: 12px}
 
 
-#headerWrap h1{
-    margin: 0 auto;width: 151px;margin-bottom: 16px;
+#headerWrap .center h1{
+    margin: 0 auto;width: 160px;padding: 13px 0;position: relative;
     }
 #headerWrap h1 a{color:#333}  
 
@@ -24,7 +21,7 @@ body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
     width: 48px;height: 48px;
     border: 1px solid #cdcdcd;
     position: absolute;
-    left:calc( 50% + 980px / 2 - 48px );top:38px;
+    right:10px;top:40px;
     cursor:pointer
 }
 .toggle div{
@@ -34,7 +31,6 @@ body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
 }
 .toggle div:first-child{top:calc( 50% - 9px)}
 .toggle div:last-child{top:calc( 50% + 7px)}
-
 
 .mainMenuWrap{background-color: #1D5DA4;}
 .mainMenuWrap .mainMenu{width: 980px;margin: 0 auto}
@@ -50,8 +46,6 @@ body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
     background: #336DAC;
 }
 
-
-/* visual */
 .visualWrap{
     /* background-image: url(../images/main_bg01.jpg);
     background-repeat: no-repeat;
@@ -74,8 +68,6 @@ body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
 }
 .visualWrap .visual img{position: absolute;right: 0;}
 
-
-/* banWrap */
 .banWrap{background-color: #eee;margin-bottom: 25px;}
 .banWrap .banner{width: 980px;margin: 0 auto;text-align: center;color:#fff}
 .banWrap .banner li{
@@ -92,7 +84,6 @@ body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
 .banWrap .banner li:nth-child(4){background-color: #3DB5F2;}
 .banWrap .banner li:nth-child(5){background-color: #95C8FF;}
 
-/* container  */
 .container{width: 980px;margin: 0 auto}
 .container.sec01{margin-bottom: 25px;}
 .container.sec01 li,
@@ -132,6 +123,21 @@ body{font-family: 'Nanum Gothic', sans-serif;min-width:980px}
 .container.sec02 .txt .btn{color:#4D8BE0;font-weight: bold;}
 
 
+@media screen and (max-width:720px){
+    .headerTopWrap{display: none;}
+    .mainMenuWrap{display: none;}
+    .visualWrap .visual{width: 100%;height: 300px;}
+    .visualWrap .visual .txt{top:50px;}
+    .visualWrap .visual h3{font-size: 50px;}
+    .visualWrap .visual img{width: 300px;right:-50px}
+    #headerWrap .toggle{right:16px; top:13px}
 
-/* footer  */
-.footerWrap{background-color: #5E5E5E;}
+    .banWrap .banner{width: 100%;}
+    .banWrap .banner li{width: 50%;}
+    .banWrap .banner li:last-child{display: none;}
+
+    .container{width: 100%;}
+    .container.sec01 li,.container.sec02 li{
+        width: calc( ( 100% - 30px ) / 3 );margin-right: 10px;}
+    .container.sec01 li:last-child,.container.sec02 li:last-child{margin-right: 0;}
+}
