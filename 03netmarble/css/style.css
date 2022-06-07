@@ -63,3 +63,6 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .container .navbar2 li:last-child{margin-right: 0;}
 .container .navbar2 li a{display:inline-block;font-size: 14px;}
 
+.container .con1{margin: 60px 0;}
+.container .con1 li{float: left;width: 360px;height: 466px;background: #fff;}
+.container .con1 h3{padding: 30px;}
