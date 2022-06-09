@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+body{font-family: 'Nanum Gothic', sans-serif;}
+
+.headerTopWrap{background-color: #00a4ca;}
+
+.headerTop{width: 1200px;margin: 0 auto;}
+.navbarMenu {float:left;}
+.navbarMenu li{
+    float:left; width: 120px;
+    background: #00688f;
+    margin-right: 4px;
+}
+.navbarMenu li a{
+    display:block; line-height: 40px;
+    text-align: center;
+    font-size: 15px;color:#fff
+}
+.navbarUtil {float:right;}
+.navbarUtil li{float:left;}
+.navbarUtil li a{
+    display: block; padding: 13.5px 4.5px;
+    font-size: 12px; color:#fff
+}
+
+
+.header{width: 1200px;margin: 0 auto;}
+
+.header h1{
+    float:left;margin: 28px 0;}
+.menuWrap{
+    width: 725px;float:right}
+.menuWrap .menu{float:left}
+.menuWrap .menu li{float:left}
+.menuWrap .menu li a{
+    display: block; padding: 50px 26px;
+    font-size: 18px;text-align: center;
+}
+.menuWrap .toggle{float:right;}
+
+
+
+
+
+
+
+
+
+
+
+
+

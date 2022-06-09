@@ -2,9 +2,18 @@
 
 body{font-family: 'Noto Sans KR', sans-serif;}
 
-.header{width: 1280px;margin: 0 auto;padding: 0 30px;}
-.header h1{float: left;}
-.header h1 img{width: 165px;height: 35px;object-fit: cover;margin-top: 20px;}
+.header{width: 1280px;margin: 0 auto;}
+.header h1{
+    width: 165px;height: 35px;
+    background-image: url(../images/logo.jpg);
+    background-size:165px 115px;
+    background-position: 0 -40px;
+}
+
+.header h1 a{display: block;height: 35px;
+    text-indent: -9999px;
+}
+/* .header h1 img{width: 165px;height: 35px;object-fit: cover;margin-top: 20px;} */
 .header .navbar{float:right;width: 530px;}
 .header li{float:left;width:calc(100% / 3);text-align: center;}
 .header li a{font-weight: bold;font-size: 20px;line-height: 76px;}
