@@ -84,9 +84,12 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 
 .sec02 li:nth-child(1){}
 .sec02 li:nth-child(2){}
-.sec02 li:nth-child(3){}
-.sec02 li:nth-child(4){}
-.sec02 li:nth-child(5){}
+.sec02 li:nth-child(3){width: 300px;height: 226px;
+    background: #00a4ca;}
+.sec02 li:nth-child(4){width: 300px;height: 226px;
+    background: #026990;}
+.sec02 li:nth-child(5){width: 300px;height: 226px;
+    background: #fff;}
 .sec02 li:nth-child(6){}
 .sec02 li:nth-child(7){}
 .sec02 li:nth-child(8){}
