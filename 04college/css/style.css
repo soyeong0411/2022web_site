@@ -2,10 +2,12 @@
 
 body{font-family: 'Nanum Gothic', sans-serif;}
 
+
+/* header */
 .headerTopWrap{background-color: #00a4ca;}
 
 .headerTop{width: 1200px;margin: 0 auto;}
-.navbarMenu {float:left;}
+.navbarMenu{float:left;}
 .navbarMenu li{
     float:left; width: 120px;
     background: #00688f;
@@ -16,27 +18,79 @@ body{font-family: 'Nanum Gothic', sans-serif;}
     text-align: center;
     font-size: 15px;color:#fff
 }
-.navbarUtil {float:right;}
+.navbarMenu li a:hover{background-color: #fff;color:black}
+
+/* .navbarMenu li:hover{background: #fff;}
+.navbarMenu li:hover a{color:black} */
+
+/* .navbarMenu li.active{background: #fff;}
+.navbarMenu li.active a{color:black} */
+
+.navbarMenu li.active a{background-color: #fff;color:black}
+
+.navbarUtil{float:right;}
 .navbarUtil li{float:left;}
-.navbarUtil li a{
-    display: block; padding: 13.5px 4.5px;
-    font-size: 12px; color:#fff
+.navbarUtil li>a{
+    display: block; height: 40px;padding: 0 10px;
+    font-size: 12px; color:#fff;
+    display: flex;justify-content: center;align-items: center;
 }
 
+.navbarUtil li:nth-child(2){padding-top: 10px;}
+.navbarUtil li:nth-child(2) a{
+    width: 20px;height: 20px;
+    background-color: #fff; color:#000; 
+    float:left;margin-right: 1px;
+}
 
 .header{width: 1200px;margin: 0 auto;}
 
 .header h1{
     float:left;margin: 28px 0;}
-.menuWrap{
-    width: 725px;float:right}
+.menuWrap{float:right}
 .menuWrap .menu{float:left}
 .menuWrap .menu li{float:left}
 .menuWrap .menu li a{
     display: block; padding: 50px 26px;
     font-size: 18px;text-align: center;
 }
+.menuWrap .menu li:last-child{margin-right: 26px;}
+
 .menuWrap .toggle{float:right;}
+.menuWrap .toggle li{float:left;padding: 38px 0;}
+
+/* section */
+
+#section{
+    background-image: url(../images/pattern.png), url(../images/section01.jpg);
+    background-repeat: repeat, no-repeat;
+}
+.sec01{width: 1200px;margin: 0 auto;
+    padding: 50px 0 30px 0;}
+.sec01 h1{float:left;
+    color:#fff; font-size: 50px;font-weight: 500;
+}
+.sec01 h1 span{font-size: 60px;font-weight:bold;}
+
+.sec01btn{float:right;}
+.sec01btn li{float:left;
+    color:#fff; font-size: 15px ;text-align: center;
+    margin-right: 10px;
+}
+.sec01btn li p{margin-top: 10px;}
+
+.sec02{width: 1200px;margin: 0 auto;}
+.sec02 li{float:left}
+
+.sec02 li:nth-child(1){}
+.sec02 li:nth-child(2){}
+.sec02 li:nth-child(3){}
+.sec02 li:nth-child(4){}
+.sec02 li:nth-child(5){}
+.sec02 li:nth-child(6){}
+.sec02 li:nth-child(7){}
+.sec02 li:nth-child(8){}
+
 
 
 
