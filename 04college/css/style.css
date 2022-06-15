@@ -62,7 +62,7 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 /* section */
 
 #section{
-    background-image: url(../images/pattern.png), url(../images/section01.jpg);
+    background-image: url(../images/pattern.png), url(../images/section01.png);
     background-repeat: repeat, no-repeat;
 }
 .sec01{width: 1200px;margin: 0 auto;
@@ -80,8 +80,8 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 .sec01btn li p{margin-top: 10px;}
 
 .sec02{width: 1200px;margin: 0 auto;
-    position: relative;}
-.sec02 li{float: left;}
+    position: relative;padding: 0 0 150px 0;}
+.sec02>ul>li{float: left;}
 .sec02slide1{width: 900px;height: 450px;}
 
 .bx-wrapper {
@@ -135,10 +135,10 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 .sec02>ul>li:nth-child(3){width: 300px;height: 226px;
     background: #00a4ca;padding: 20px;}
 .sec02 li h3{color: #fff;
-    font-size: 28px;margin-bottom: 20px;
-    
+    font-size: 28px;margin-bottom: 15px;
 }
-.sec02 .link li{width: calc( ( 100% - 20px ) / 3 );margin-right: 10px;}
+
+.sec02 .link li{float:left;width: calc( ( 100% - 20px ) / 3 );margin-right: 10px;}
 .sec02 .link li:last-child{margin: 0;}
 .sec02 .link li img{display: block;margin: auto;margin-bottom: 10px;}
 .sec02 .link li p{text-align: center;color: #fff;
@@ -147,17 +147,36 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 .sec02>ul>li:nth-child(4){width: 300px;height: 226px;
     background: #026990;padding: 20px;}
 .sec02 .line{background-color: #fff;height: 2px;
+    margin-bottom: 15px;
     }
+.sec02 .notice li{background-image: url(../images/dot.png);
+background-repeat: no-repeat;background-position: 0 50%;
+margin-bottom: 15px;}
+/* background: color url repeat */
+
+.sec02 .notice li a{display: block;position: relative;
+    text-indent: 7px;color:#fff;
+    }
+.sec02 .notice li p{
+    width: 190px;
+    white-space: nowrap;text-overflow: ellipsis;
+    overflow: hidden;
+}
+.sec02 .notice li span{display: block;position: absolute;
+    right: 0;top: 0;}
 
 .sec02>ul>li:nth-child(5){width: 300px;height: 226px;
     background:#fff; padding: 20px;}
-
-
-.sec02>ul>li:nth-child(7){width: 300px;height: 226px;
-    position: relative;
+.sec02>ul>li:nth-child(5) h3{color:#237390}
+.sec02>ul>li:nth-child(5) p{
+    width: 120px;  
 }
-.sec02 .history h3{position: absolute;top:20px;left:20px;
-    color:#026990;font-size: 24px;font-weight: bolder;}
+.sec02>ul>li:nth-child(5) .text li{float:left;
+    margin-right: 10px;margin-bottom: 30px;}
+.sec02>ul>li:nth-child(5) .text li:last-child{margin-right: 0;}
+.sec02>ul>li:nth-child(5) ul{float: right;}
+.sec02>ul>li:nth-child(5) li{float: left;margin-right: 5px;}
+.sec02>ul>li:nth-child(5) li:last-child{margin-right: 0;}
 
 .sec02 li:nth-child(6){width: 300px;height: 226px;
     background-image: url(../images/together.png);
@@ -171,11 +190,37 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 ;position: absolute;top: 170px;padding-top: 20px;color: #fff;
 text-align: center;transition: 0.3s;}
 
-.sec02 li:nth-child(8){width: 900px;height: 226px;}
+.sec02>ul>li:nth-child(7){width: 300px;height: 226px;
+    position: relative;
+}
+.sec02 .history h3{position: absolute;top:20px;left:20px;
+}
+.sec02 .history h3 a{
+    color:#026990;font-size: 24px; font-weight: bold;}
+.sec02 .btn3{width: 70px;height: 70px;
+    background-color:rgba(0,0,0,0.5);
+    border-radius: 50%;
+    position: absolute;top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sec02slide2{width: 900px;height: 225px;
+}
+.sec02slide2 .txt h1{color:#132157;
+    font-weight: bold;}
+.sec02slide2 .txt p{color:#132157;font-size: 22px;
+    font-weight: 700;}
+.sec02slide2 .btn4{display: inline-block;
+    background-color: rgba(72, 156, 215, 0.5);
+    border-radius: 30px; padding: 10px 30px 10px 30px;
+    position: absolute; top:50px;left:50px} 
+.sec02slide2 .btn4 a{color:#071758}
 
-
-
-
+.foot{width: 1200px;margin: 0 auto;padding: 30px 0;}
+.foot h1{float: left;margin:30px 100px 30px 0;}
+.foot .foottxt{float: left;}
+.foot .foottxt li{float: left;margin-right: 30px;}
+.foot p{margin: 30px 0;}
+.foot .foottxt li:last-child{margin-right: 0;}
 
 
 
