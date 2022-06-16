@@ -171,53 +171,48 @@
                     <div class="history">
                         <h3><a href="#">역사로 미래를 여는 숭실</a></h3>
                         <img src="../04college/images/history.png" alt="">
-                        <div class="btn3">
-                            <a href="#"><img src="../04college/images/Vector.png" alt=""></a>
-                        </div>
+                        <div class="btn3"></div>
                     </div>
                     
                 </li>
                 <li>
-                    <div class="sec02slide2">
-                        <ul class="slide2">
-                            <li>
-                                <img src="../04college/images/sec02_2slide1.png" alt="">
-                                <div class="txt">
-                                    <h1>2022년 신·편입생 모집</h1>
-                                    <p>2022.07.01. ~ 07.30.</p>
-                                </div>
-                                <div class="btn"><a href="#">접수하러가기→</a></div>
-                            </li>
-                            <li><img src="../04college/images/sec02_2slide2.png" alt=""></li>
-                            <li>
-                                <img src="../04college/images/sec02_2slide3.png" alt="">
-                                <div class="btn4"><a href="#">받으러가기→</a></div>
-                            </li>
-                        </ul>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="../04college/images/sec02_2slide1.png" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="../04college/images/sec02_2slide2.png" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="../04college/images/sec02_2slide3.png" alt="">
+                          </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
-                    <div class="Next"></div>
+
                 </li>
             </ul>
         </div>
     </section>
     <footer id="footer">
-        <div class="footerWrap">
-            <div class="foot">
-                <h1><img src="../04college/images/logo_dark.png" alt=""></h1>
-                    <div class="foottxt">
-                        <ul class="clearfix">
-                            <li>회사소개</li>
-                            <li>숭실대학교</li>
-                            <li>개인정보 취급방침</li>
-                            <li>이용성적</li>
-                            <li>입점/제휴문의 및 광고</li>
-                            <li>이메일 무단수집거부</li>
-                        </ul>
-                        <p>06978 서울시 동작구 상도로 369 숭실대학교 TEL. 02-820-0114</p>
-                        <p>Copyright Soongsil University All Rights Reserved.</p>
-                    </div>
+        <div class="foot">
+            <h1><img src="../04college/images/logo_dark.png" alt=""></h1>
+            <div class="foottxt">
+                <ul class="clearfix">
+                    <li>회사소개</li>
+                    <li>숭실대학교</li>
+                    <li>개인정보 취급방침</li>
+                    <li>이용성적</li>
+                    <li>입점/제휴문의 및 광고</li>
+                    <li>이메일 무단수집거부</li>
+                </ul>
+                <p>06978 서울시 동작구 상도로 369 숭실대학교 TEL. 02-820-0114</p>
+                <p>Copyright Soongsil University All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
 </body>
 </html>
