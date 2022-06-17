@@ -224,17 +224,21 @@ text-align: center;transition: 0.3s;}
 .sec02 .btn3 a{display: block;height: 100%; }
 
 
-.sec02slide2{width: 900px;height: 225px;
+.swiper{width: 900px;height: 225px;
 }
-.sec02slide2 .txt h1{color:#132157;
-    font-weight: bold;}
-.sec02slide2 .txt p{color:#132157;font-size: 22px;
-    font-weight: 700;}
-.sec02slide2 .btn4{display: inline-block;
-    background-color: rgba(72, 156, 215, 0.5);
+.swiper-slide .txt3{position: absolute;top: 40px;left: 40px;}
+.swiper-slide .txt3 h1{font-size: 35px;
+    font-weight: bold;color:#071758;
+    margin-bottom: 10px;
+}
+.swiper-slide .txt3 p{font-size: 20px;
+    font-weight: bold;color:#071758
+}
+.swiper-slide .btn4{display: inline-block;
+    background-color: rgba(224, 198, 112, 0.5);
     border-radius: 30px; padding: 10px 30px 10px 30px;
-    position: absolute; top:50px;left:50px} 
-.sec02slide2 .btn4 a{color:#071758}
+    position: absolute; bottom:40px;left:40px} 
+.swiper-slide .btn4 a{color:#071758;font-size: 15px;}
 
 #footer .foot{width: 1200px;margin: 0 auto;padding: 30px 0;
 }
