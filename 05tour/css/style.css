@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+body{font-family: 'Noto Sans KR', sans-serif;}
+
+.container{width: 980px;margin: 0 auto;}
+
+.headerTopWrap{
+    /* background-image: url(../images/Philippines_01_0.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover; */
+    background-color: #60d6a9;
+    }
+
+.headerTop{display: flex;justify-content: space-between;}
+.headerTop a{color:#333;font-size: 14px;}
+
+.headerTop .searchbar{
+    width: 300px;height: 30px;
+    background-color: #fff;
+    margin: 15px 0;
+    border-radius: 10px;}
+
+.headerTop .Util ul{
+    width: 370px;height: 60px;
+    display: flex;justify-content: space-between;
+    align-items: center;}
+.headerTop .Util ul{width: 300px;}
+
+
+.header{
+    display: flex;justify-content: space-between;
+    align-items: center;}
+.header img{width: 110%;}
+.header .mainMenu li{float:left;
+    margin-right: 40px;
+    font-size: 18px;font-weight: bold;
+}
+.header .mainMenu li:last-child{margin-right: 0;}
+
+.header .toggle{display: flex;
+    margin: 15px 0;}
+.header .toggle .heart,
+.header .toggle .all{
+    background-image: url(../images/ico_like.png);
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    height: 60px;width: 60px;
+    border:1px solid rgba(202, 202, 202);
+    border-radius:15%;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.header .toggle .all:last-child{margin-right: 0;}
+.header .toggle .heart a{position: absolute;
+    bottom: 1px;right: 12px;
+    font-size: 12px;
+}
+.header .toggle .all a{
+    position: absolute;
+    bottom: 1px;right: 7px;
+    font-size: 12px;
+}
+
