@@ -11,25 +11,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var slide = $(".slide").bxSlider({
+                controls:false,
+                pagerCustom:".slideTab",
+                mode:"vertical"
+            });
+        });
+    </script>
     
 </head>
 <body>
     <header id="header">
         <div class="headerTopWrap">
             <div class="headerTop container">
-                <div class="searchbar">
-                    searchbar
-                </div>
                 <nav class="Util">
-                    <ul>
+                    <ul class="clearfix">
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
                         <li><a href="#">예약확인/결제</a></li>
                         <li><a href="#">고객센터</a></li>
                     </ul>
                 </nav>
+                <div class="searchbarWrap">
+                    <p>SEARCH</p>
+                    <form action="#">
+                        <input type="text" name="search" placeholder="검색어를 입력하세요." class="inp">
+                    </form>
+                    <div class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="headerWrap">
@@ -59,19 +75,42 @@
     </header>
     <section id="section">
         <div class="sec01 container">
-            <div class="sec01Left">
-                <ul>
-                    <li>
-
-                    </li>
-                    <li>
-
-                    </li>
-                    <li>
-
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <div class="slideWrap">
+                        <ul class="slide">
+                            <li>
+                                <img src="images/slide.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/slide.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/slide.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/slide.png" alt="">
+                            </li>
+                        </ul>
+                        <div class="slideTab">
+                            <a href="#" data-slide-index="0">
+                                <i class="fa-solid fa-plane"> 공항예약</i>
+                            </a>
+                            <a href="#" data-slide-index="1">
+                                <i class="fa-solid fa-computer-mouse"> 호텔예약</i>
+                            </a>
+                            <a href="#" data-slide-index="2">
+                                <i class="fa-solid fa-car-side"> 렌트카</i>
+                            </a>
+                            <a href="#" data-slide-index="3">
+                                <i class="fa-solid fa-umbrella-beach"> 휴양지</i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+            
         </div>
     </section>
 </body>

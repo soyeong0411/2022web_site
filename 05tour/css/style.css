@@ -4,6 +4,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 .container{width: 980px;margin: 0 auto;}
 
+/* header */
 .headerTopWrap{
     /* background-image: url(../images/Philippines_01_0.jpg);
     background-repeat: no-repeat;
@@ -12,20 +13,43 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     background-color: #60d6a9;
     }
 
-.headerTop{display: flex;justify-content: space-between;}
+.headerTop{display: flex;justify-content: space-between;
+    align-items: center;}
 .headerTop a{color:#333;font-size: 14px;}
 
-.headerTop .searchbar{
-    width: 300px;height: 30px;
-    background-color: #fff;
-    margin: 15px 0;
-    border-radius: 10px;}
-
 .headerTop .Util ul{
-    width: 370px;height: 60px;
     display: flex;justify-content: space-between;
-    align-items: center;}
-.headerTop .Util ul{width: 300px;}
+    align-items: center;
+    width: 320px;height: 60px;
+    margin-left: 15px;
+}
+
+
+.headerTop .searchbarWrap{
+    position: relative;
+}
+.headerTop .inp{
+    width: 300px;height: 30px;background: #fff;
+    text-indent: 70px;
+    border-radius: 15px;
+    border: 1px solid rgba(14, 100, 54);
+}
+.headerTop .inp:focus{outline:none;}
+.headerTop .icon{
+    width: 22px;height: 22px;
+    border: 1px solid #389773;
+    border-radius: 50%;
+    display: flex;justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.headerTop p{
+    position: absolute;top: 5px;left: 7px;
+    font-size: 13px;
+}
+.headerTop .icon{
+    position: absolute;right: 5px;top: 4px;
+}
 
 
 .header{
@@ -63,3 +87,32 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     font-size: 12px;
 }
 
+#section{background-image: url(../images/bg02.jpg);}
+
+.sec01 .slideWrap{
+    width: 482px;height: 300px;
+    position: relative;
+}
+/* bx-wrapper가 적용되지 않을 때, 앞에 부모 태그 넣어줄 것 */
+.sec01 .slideWrap .bx-wrapper {
+    -moz-box-shadow: 0 0 0 #ccc;
+    -webkit-box-shadow: 0 0 0 #ccc;
+    box-shadow: 0 0 0 #ccc;
+    border: 0 none;
+}
+.sec01 .slideTab{
+    position: absolute;top: 0;left: 0;
+    width: 132px;height: 100%
+}
+/* display를 지정해줘야 나눠짐 */
+.sec01 .slideTab a{
+    width: 132px;height:calc( 100% / 4) ;
+    display: flex;justify-content: center;
+    align-items: center;
+    background:#fff;
+    font-size: 18px;
+    }
+.sec01 .slideTab a   
+.sec01 .slideTab i{font-size: 18px;
+
+}
