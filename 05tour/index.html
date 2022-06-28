@@ -136,7 +136,7 @@
         <div class="sec02 container">
             <ul class="clearfix">
                 <li>
-                    <div class="swiper mySwiper first">
+                    <div class="swiper first">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <img src="images/sec02_1.jpg" alt="">
@@ -148,17 +148,16 @@
                             <img src="images/sec02_1.jpg" alt="">
                           </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                            <img src="images/1.png" alt="">
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img src="images/3.png" alt="">
+                        </div>
                       </div>
                       <script>
                         var swiper = new Swiper(".first", {
                             loop: true,
-                          pagination: {
-                            el: ".swiper-pagination",
-                            type: "progressbar",
-                          },
                           navigation: {
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
@@ -168,7 +167,34 @@
                     
                 </li>
                 <li>
-                    <img src="images/sec02_2.jpg" alt="">
+                    <div class="swiper second">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="images/sec02_2.jpg" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="images/sec02_2.jpg" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="images/sec02_2.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="images/1.png" alt="">
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img src="images/3.png" alt="">
+                        </div>
+                      </div>
+                      <script>
+                        var swiper = new Swiper(".second", {
+                            loop: true,
+                          navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                          },
+                        });
+                      </script>
                 </li>
                 <li>
                     <img src="images/sec02_3.jpg" alt="">
