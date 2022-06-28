@@ -54,7 +54,8 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 .header{
     display: flex;justify-content: space-between;
-    align-items: center;}
+    align-items: center;
+}
 .header img{width: 110%;}
 .header .mainMenu li{float:left;
     margin-right: 40px;
@@ -87,11 +88,17 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     font-size: 12px;
 }
 
-#section{background-image: url(../images/bg02.jpg);}
+#section{background-image: url(../images/bg02.jpg);
+    padding: 50px 0;}
+.sec01{position: relative;}
+.sec01 .text{position: absolute;left:calc( 50% + 20px)}
+.sec01 .text h1{font-size:70px;}
+.sec01 .text p{font-size: 30px;}
 
 .sec01 .slideWrap{
     width: 482px;height: 300px;
     position: relative;
+    margin-bottom: 16px;
 }
 /* bx-wrapper가 적용되지 않을 때, 앞에 부모 태그 넣어줄 것 */
 .sec01 .slideWrap .bx-wrapper {
@@ -102,7 +109,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 .sec01 .slideTab{
     position: absolute;top: 0;left: 0;
-    width: 132px;height: 100%
+    width: 132px;height: 100%;
 }
 /* display를 지정해줘야 나눠짐 */
 .sec01 .slideTab a{
@@ -112,7 +119,64 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     background:#fff;
     font-size: 18px;
     }
-.sec01 .slideTab a   
-.sec01 .slideTab i{font-size: 18px;
+.sec01 .slideTab i{font-size: 18px;}
 
+.sec01 .sec01_Item{float: left;
+    width: 233px;height: 240px;overflow: hidden;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    position: relative;
+
+}
+.sec01 .sec01_Item img{height: 100%;}
+.sec01 .sec01_square{
+    width: 233px;height: 240px;
+    background: rgba(6, 37, 7, 0.7);
+    position: absolute;top: 180px;
+    transition: 0.3s;
+}
+.sec01 .sec01_square a{
+    display: block;height: 100%;;color: #fff;
+    font-size: 20px;text-align: center;
+    padding-top: 15px;
+}
+.sec01 .sec01_square p{
+    color: #fff;opacity: 0;
+    position: absolute;top: 0;
+    font-weight: 200;
+}
+.sec01 .sec01_Item:hover .sec01_square{
+    top: 0;padding-top:calc(50% - 60px);
+}
+.sec01 .sec01_Item:hover p,
+.sec01 .sec01_Item:hover .txt p{
+    top: 110px; left:calc(50% - 70px); text-align: center;
+    opacity: 1;
+    font-size: 13px;
+}
+.sec01 .sec01_Item:hover .txt p{
+    top: 110px; left: calc(50% - 65px); 
+}
+
+
+.sec02 li{float:left;
+    width: 233px;height: 240px;
+    overflow: hidden;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+.sec02 li img{width: 100%;height: 100%;}
+.sec02 li:nth-child(4){margin-right: 0;}
+.sec02 li:nth-child(8){margin-right: 0;}
+
+
+.sec02 .swiper {
+    width: 100%;
+    height: 100%;
+  }
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
