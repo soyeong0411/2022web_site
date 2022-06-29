@@ -170,13 +170,16 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .sec02 li:nth-child(8){margin-right: 0;}
 
 
-.sec02 .swiper {
+.sec02 .first,.sec02 .second {
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
-.swiper-slide img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{display: none;}
+
+.first .swiper-button-prev, 
+.second .swiper-button-prev{position: absolute;left: 0;}
+.first .swiper-button-next,
+.second .swiper-button-next{position: absolute;right: 0;}
