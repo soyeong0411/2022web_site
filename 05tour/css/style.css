@@ -4,13 +4,13 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 .container{width: 980px;margin: 0 auto;}
 
-/* header */
+/* headerTop */
 .headerTopWrap{
     /* background-image: url(../images/Philippines_01_0.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover; */
-    background-color: #60d6a9;
+    background-color: #94e7c7;
     }
 
 .headerTop{display: flex;justify-content: space-between;
@@ -23,8 +23,6 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     width: 320px;height: 60px;
     margin-left: 15px;
 }
-
-
 .headerTop .searchbarWrap{
     position: relative;
 }
@@ -51,7 +49,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     position: absolute;right: 5px;top: 4px;
 }
 
-
+/* header */
 .header{
     display: flex;justify-content: space-between;
     align-items: center;
@@ -88,12 +86,75 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     font-size: 12px;
 }
 
-#section{background-image: url(../images/bg02.jpg);
+/* section */
+#section{
+    background-image: url(../images/bg02.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 50px 0;}
+
+#section .ball01,
+#section .ball02,
+#section .ball03,
+#section .ball04,
+#section .ball05,
+#section .ball06
+{
+    position: absolute;
+}
+
+#section .ball01
+{
+    right: 125px;top: 200px;
+    animation-name:ball01;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; /* 반복 횟수 */
+    animation-direction: alternate; /* 복원 */
+    animation-timing-function: linear;
+}
+#section .ball05
+{width: 50px;
+    right: 75px;top: -20px;
+    transform: rotate(-20deg);
+    animation-name:ball05;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite; /* 반복 횟수 */
+    animation-direction: alternate; /* 복원 */
+    animation-timing-function: linear;
+}
+#section .ball06{
+    width: 40px;
+    right: 55px;top: -20px;
+    transform: rotate(20deg);
+    animation-name:ball06;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite; /* 반복 횟수 */
+    animation-direction: alternate; /* 복원 */
+    animation-timing-function: linear;
+}
+
+@keyframes ball01{
+    to{top:150px;}
+}
+@keyframes ball05{
+    to{top:-30px;}
+}
+@keyframes ball06{
+    to{top:-30px;}
+}
+
+/* #section .ball01{
+    animation: ball01 2s infinite alternate;
+} */
+
+
+/* sec01 */
 .sec01{position: relative;}
-.sec01 .text{position: absolute;left:calc( 50% + 20px)}
-.sec01 .text h1{font-size:70px;}
-.sec01 .text p{font-size: 30px;}
+.sec01 .text{position: absolute;
+    top:-20px;left:calc( 50% + 40px)}
+.sec01 .text h1{font-size:80px;}
+.sec01 .text p{font-size: 35px;}
 
 .sec01 .slideWrap{
     width: 482px;height: 300px;
@@ -108,13 +169,29 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 .sec01 .slide form{height: 100%;}
 .sec01 .slide fieldset{border: 0 none;}
-.sec01 .slide .blind{display: block;position: absolute;left: 0;top: -999px;}
+.sec01 .slide .blind{display: block;
+    position: absolute;left: 0;top: -9999px;}
 .sec01 .slide select{height: 40px;width: 100%;}
 
-.sec01 .field 
+.sec01 .slideTab{
+    position: absolute;top: 0;left: 0;
+    width: 132px;height: 100%;
+}
 
-
-
+/* display를 지정해줘야 나눠짐 */
+.sec01 .slideTab a{
+    width: 132px;height:calc( 100% / 4) ;
+    display: flex;justify-content: center;
+    align-items: center;
+    background:#94e7c7;
+    font-size: 18px;
+    
+    }
+.sec01 .slideTab a.active{
+    background-color: #fff;
+    border: 1px solid rgb(32, 99, 53);
+}
+.sec01 .slideTab i{font-size: 18px;}
 
 /* bx-wrapper가 적용되지 않을 때, 앞에 부모 태그 넣어줄 것 */
 .sec01 .slideWrap .bx-wrapper {
@@ -123,19 +200,6 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     box-shadow: 0 0 0 #ccc;
     border: 0 none;
 }
-.sec01 .slideTab{
-    position: absolute;top: 0;left: 0;
-    width: 132px;height: 100%;
-}
-/* display를 지정해줘야 나눠짐 */
-.sec01 .slideTab a{
-    width: 132px;height:calc( 100% / 4) ;
-    display: flex;justify-content: center;
-    align-items: center;
-    background:#fff;
-    font-size: 18px;
-    }
-.sec01 .slideTab i{font-size: 18px;}
 
 .sec01 .sec01_Item{float: left;
     width: 233px;height: 240px;overflow: hidden;
@@ -175,7 +239,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     top: 110px; left: calc(50% - 65px); 
 }
 
-
+/* sec02 */
 .sec02 li{float:left;
     width: 233px;height: 240px;
     overflow: hidden;
@@ -185,7 +249,6 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .sec02 li img{width: 100%;height: 100%;}
 .sec02 li:nth-child(4){margin-right: 0;}
 .sec02 li:nth-child(8){margin-right: 0;}
-
 
 .sec02 .first,.sec02 .second {
     width: 100%;
