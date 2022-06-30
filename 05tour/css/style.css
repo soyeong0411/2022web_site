@@ -10,7 +10,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover; */
-    background-color: #94e7c7;
+    background-color: #eaf4f1;
     }
 
 .headerTop{display: flex;justify-content: space-between;
@@ -106,8 +106,18 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 #section .ball01
 {
-    right: 125px;top: 200px;
+    right: 125px;top: 220px;
     animation-name:ball01;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; /* 반복 횟수 */
+    animation-direction: alternate; /* 복원 */
+    animation-timing-function: linear;
+}
+#section .ball04
+{
+    width: 340px;
+    right: -37px;top: -40px;
+    animation-name:ball04;
     animation-duration: 1s;
     animation-iteration-count: infinite; /* 반복 횟수 */
     animation-direction: alternate; /* 복원 */
@@ -135,7 +145,10 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 
 @keyframes ball01{
-    to{top:150px;}
+    to{top:190px;}
+}
+@keyframes ball04{
+    to{top:-20px;}
 }
 @keyframes ball05{
     to{top:-30px;}
@@ -167,11 +180,46 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     width: 350px;height: 300px;
     position: absolute;right: 0;top: 0;
 }
-.sec01 .slide form{height: 100%;}
+
+.sec01 .slide form{height: 300px;
+    padding: 20px;
+    }
 .sec01 .slide fieldset{border: 0 none;}
 .sec01 .slide .blind{display: block;
     position: absolute;left: 0;top: -9999px;}
-.sec01 .slide select{height: 40px;width: 100%;}
+.sec01 .slide select{
+    height: 30px;width: 100%;
+    padding: 0 4px;
+    border-radius: 5px;
+    border: 1px solid rgb(32, 99, 53)
+    }
+.sec01 .slide label{display: block;margin: 5px 0;}
+.sec01 .inp-field{
+    width: 150px;height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(32, 99, 53)
+}
+.sec01 .field.date{display: flex;justify-content: space-between;}
+.sec01 .field.seat select{width: 130px;}
+
+.sec01 .field.info{
+    display: flex;justify-content: space-between;
+    margin-bottom: 15px;}
+.sec01 .age-field{
+    width: 80px;height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(32, 99, 53);
+    text-indent: 10px;
+    
+}
+.sec01 .btn-search{
+    width: 100%;height: 35px;
+    background-color: rgb(88, 206, 125);
+    border-radius: 5px;
+    border: 0 none;cursor: pointer;
+    border: 1px solid rgb(32, 99, 53)
+}
+
 
 .sec01 .slideTab{
     position: absolute;top: 0;left: 0;
@@ -181,15 +229,19 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 /* display를 지정해줘야 나눠짐 */
 .sec01 .slideTab a{
     width: 132px;height:calc( 100% / 4) ;
-    display: flex;justify-content: center;
+    display: flex;
     align-items: center;
-    background:#94e7c7;
+    background:#eaf4f1;
     font-size: 18px;
-    
+    text-indent: 15px;
+    border-bottom: 1px solid rgb(32, 99, 53);
     }
+.sec01 .slideTab a:last-child{
+    border-bottom: 0 none;
+}
 .sec01 .slideTab a.active{
     background-color: #fff;
-    border: 1px solid rgb(32, 99, 53);
+    border: 3px solid rgb(32, 99, 53);
 }
 .sec01 .slideTab i{font-size: 18px;}
 
@@ -240,15 +292,15 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 
 /* sec02 */
-.sec02 li{float:left;
+.sec02 li
+{   float:left;
     width: 233px;height: 240px;
     overflow: hidden;
     margin-right: 16px;
     margin-bottom: 16px;
 }
 .sec02 li img{width: 100%;height: 100%;}
-.sec02 li:nth-child(4){margin-right: 0;}
-.sec02 li:nth-child(8){margin-right: 0;}
+.sec02 li:nth-child(4),.sec03 li:nth-child(4){margin-right: 0;}
 
 .sec02 .first,.sec02 .second {
     width: 100%;
@@ -280,5 +332,42 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     bottom: 0;right: 0;
     z-index: 2;
 }
-
+.sec03{display: flex;}
+.sec03 .sec03_Item{
+    width:233px;height: 240px;
+    margin-right: 16px;
+    position: relative;
+}
+.sec03 .sec03_Item:last-child{margin-right: 0;}
+.sec03 .sec03_Item img{width: 233px;height: 240px;}
+.sec03 .sec03_Item:hover .sec03_icon{
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+.sec03 .sec03_Item:hover .sec03_icon2{
+    transform: rotate(-180deg);
+    z-index: 1;
+}
+.sec03 .sec03_icon,.sec03 .sec03_icon2{
+    width: 50px;height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;justify-content: center;
+    align-items: center;
+    position: absolute;top:calc(50% - 25px);
+    right: calc(50% - 25px);
+    color:#fff;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.sec03 .sec03_square{
+    width: 233px;height: 240px;
+    background: rgba(6, 37, 7, 0.7);
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
+}
+.sec03 .sec03_Item:hover .sec03_square{
+    top: 0;opacity: 1;
+}
 

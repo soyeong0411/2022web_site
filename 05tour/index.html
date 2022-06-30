@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.5/swiper-bundle.css" integrity="sha512-wMTbLMebj4OAT4mU2nV6XvE8QuTHOrwPKNaGuGF2wiaNU9IHea/bgJcKP/DtG+c3+LbNu54evMgWOWPvN/7iDQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.5/swiper-bundle.min.js" integrity="sha512-g+qKl+LYdI74iYWV+VI91ahB/N6mVjrP8aGCtyIGvM2FkgpwbEEey0eUVUuqNn94yYS6/WxVwTawukEqaf+53A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
+    <script>    
         $(document).ready(function(){
             var slide = $(".slide").bxSlider({
                 controls:false,
@@ -25,9 +27,24 @@
                 mode:"vertical",
                 touchEnabled:false
             });
+
+            $("#sdate1,#edate1,#sdate2,#edate2,#sdate3,#edate3,#sdate4,#edate4").datepicker({
+                dateFormat: 'yy/mm/dd',
+                prevText: '이전 달',
+                nextText: '다음 달',
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNames: ['일','월','화','수','목','금','토'],
+                dayNamesShort: ['일','월','화','수','목','금','토'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                showMonthAfterYear: true,
+                changeMonth: true,
+                changeYear: true,
+                yearSuffix: '년'
+            });
         });
     </script>
-    
+    <!-- 날짜 안나올 때, jquery링크확인/date명 확인 -->
 </head>
 <body>
     <header id="header">
@@ -80,8 +97,7 @@
     <section id="section">
         <div class="sec01 container">
             <img src="images/content1.png" alt="" class="ball01">
-            <img src="images/content2.png" alt="" class="ball02">
-            <img src="images/content3.png" alt="" class="ball03">
+            <!-- <img src="images/content2.png" alt="" class="ball02"> -->
             <img src="images/content4.png" alt="" class="ball04">
             <img src="images/free-icon-heart-7809180.png" alt="" class="ball05">
             <img src="images/free-icon-heart-7809180.png" alt="" class="ball06">
@@ -111,26 +127,180 @@
                                             </div>
                                             <div class="field date">
                                                 <div class="start">
-                                                    <label for="sdate">출발일</label>
-                                                    <input type="text" id="sdate" class="inp-field">
+                                                    <label for="sdate1">출발일</label>
+                                                    <input type="text" id="sdate1" class="inp-field">
                                                 </div>
                                                 <div class="end">
-                                                    <label for="edate">도착일</label>
-                                                    <input type="text" id="edate" class="inp-field">
+                                                    <label for="edate1">도착일</label>
+                                                    <input type="text" id="edate1" class="inp-field">
                                                 </div>
                                             </div>
+                                            <div class="field info">
+                                                <div class="field seat">
+                                                    <label for="seat">좌석등급</label>
+                                                    <select name="seat_g" id="seat">
+                                                        <option value="">좌석선택</option>
+                                                        <option value="일반석">일반석</option>
+                                                        <option value="프레스티지석">프레스티지석</option>
+                                                        <option value="일등석">일등석</option>
+                                                    </select>
+                                                </div>
+                                                <div class="field adult">
+                                                    <label for="age">성인</label>
+                                                    <input type="number" name="age_a" id="age" class="age-field">
+                                                </div>
+                                                <div class="field child">
+                                                    <label for="age">아이</label>
+                                                    <input type="number" name="age_c" id="age" class="age-field">
+                                                </div>
+                                            </div>
+                                            <input type="submit" value="검색하기" class="btn-search">
                                         </fieldset>
                                       
                                     </form>
                                 </li>
                                 <li>
-                                    <img src="images/s_bg.png" alt="">
+                                    <form action="#">
+                                        <fieldset>
+                                            <legend class="blind">여행일정</legend>
+                                            <div class="field">
+                                                <label for="nation">가고 싶은 나라를 선택하세요.</label>
+                                                <select name="nation_c">
+                                                    <option value="">선택하세요.</option>
+                                                    <option value="미국">미국</option>
+                                                    <option value="베트남">베트남</option>
+                                                    <option value="괌">괌</option>
+                                                    <option value="두바이">두바이</option>
+                                                </select>
+                                            </div>
+                                            <div class="field date">
+                                                <div class="start">
+                                                    <label for="sdate2">출발일</label>
+                                                    <input type="text" id="sdate2" class="inp-field">
+                                                </div>
+                                                <div class="end">
+                                                    <label for="edate2">도착일</label>
+                                                    <input type="text" id="edate2" class="inp-field">
+                                                </div>
+                                            </div>
+                                            <div class="field info">
+                                                <div class="field seat">
+                                                    <label for="seat">좌석등급</label>
+                                                    <select name="seat_g" id="seat">
+                                                        <option value="">좌석선택</option>
+                                                        <option value="일반석">일반석</option>
+                                                        <option value="프레스티지석">프레스티지석</option>
+                                                        <option value="일등석">일등석</option>
+                                                    </select>
+                                                </div>
+                                                <div class="field adult">
+                                                    <label for="age">성인</label>
+                                                    <input type="number" name="age_a" id="age" class="age-field">
+                                                </div>
+                                                <div class="field child">
+                                                    <label for="age">아이</label>
+                                                    <input type="number" name="age_c" id="age" class="age-field">
+                                                </div>
+                                            </div>
+                                            <input type="submit" value="검색하기" class="btn-search">
+                                        </fieldset>
+                                      
+                                    </form>
                                 </li>
                                 <li>
-                                    <img src="images/s_bg.png" alt="">
+                                    <form action="#">
+                                        <fieldset>
+                                            <legend class="blind">여행일정</legend>
+                                            <div class="field">
+                                                <label for="nation">가고 싶은 나라를 선택하세요.</label>
+                                                <select name="nation_c">
+                                                    <option value="">선택하세요.</option>
+                                                    <option value="미국">미국</option>
+                                                    <option value="베트남">베트남</option>
+                                                    <option value="괌">괌</option>
+                                                    <option value="두바이">두바이</option>
+                                                </select>
+                                            </div>
+                                            <div class="field date">
+                                                <div class="start">
+                                                    <label for="sdate3">출발일</label>
+                                                    <input type="text" id="sdate3" class="inp-field">
+                                                </div>
+                                                <div class="end">
+                                                    <label for="edate3">도착일</label>
+                                                    <input type="text" id="edate3" class="inp-field">
+                                                </div>
+                                            </div>
+                                            <div class="field info">
+                                                <div class="field seat">
+                                                    <label for="seat">좌석등급</label>
+                                                    <select name="seat_g" id="seat">
+                                                        <option value="">좌석선택</option>
+                                                        <option value="일반석">일반석</option>
+                                                        <option value="프레스티지석">프레스티지석</option>
+                                                        <option value="일등석">일등석</option>
+                                                    </select>
+                                                </div>
+                                                <div class="field adult">
+                                                    <label for="age">성인</label>
+                                                    <input type="number" name="age_a" id="age" class="age-field">
+                                                </div>
+                                                <div class="field child">
+                                                    <label for="age">아이</label>
+                                                    <input type="number" name="age_c" id="age" class="age-field">
+                                                </div>
+                                            </div>
+                                            <input type="submit" value="검색하기" class="btn-search">
+                                        </fieldset>
+                                      
+                                    </form>
                                 </li>
                                 <li>
-                                    <img src="images/s_bg.png" alt="">
+                                    <form action="#">
+                                        <fieldset>
+                                            <legend class="blind">여행일정</legend>
+                                            <div class="field">
+                                                <label for="nation">가고 싶은 나라를 선택하세요.</label>
+                                                <select name="nation_c">
+                                                    <option value="">선택하세요.</option>
+                                                    <option value="미국">미국</option>
+                                                    <option value="베트남">베트남</option>
+                                                    <option value="괌">괌</option>
+                                                    <option value="두바이">두바이</option>
+                                                </select>
+                                            </div>
+                                            <div class="field date">
+                                                <div class="start">
+                                                    <label for="sdate4">출발일</label>
+                                                    <input type="text" id="sdate4" class="inp-field">
+                                                </div>
+                                                <div class="end">
+                                                    <label for="edate4">도착일</label>
+                                                    <input type="text" id="edate4" class="inp-field">
+                                                </div>
+                                            </div>
+                                            <div class="field info">
+                                                <div class="field seat">
+                                                    <label for="seat">좌석등급</label>
+                                                    <select name="seat_g" id="seat">
+                                                        <option value="">좌석선택</option>
+                                                        <option value="일반석">일반석</option>
+                                                        <option value="프레스티지석">프레스티지석</option>
+                                                        <option value="일등석">일등석</option>
+                                                    </select>
+                                                </div>
+                                                <div class="field adult">
+                                                    <label for="age">성인</label>
+                                                    <input type="number" name="age_a" id="age" class="age-field">
+                                                </div>
+                                                <div class="field child">
+                                                    <label for="age">아이</label>
+                                                    <input type="number" name="age_c" id="age" class="age-field">
+                                                </div>
+                                            </div>
+                                                <input type="submit" value="검색하기" class="btn-search">
+                                        </fieldset>
+                                    </form>
                                 </li>
                             </ul>
                         </div>
@@ -248,20 +418,28 @@
                 <li>
                     <img src="images/sec02_4.jpg" alt="">
                 </li>
-                <li>
-                    <img src="images/sec02_4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="images/sec02_4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="images/sec02_4.jpg" alt="">
-                </li>
-                <li>
-                    <img src="images/sec02_4.jpg" alt="">
-                </li>
-
             </ul>
+        </div>
+        <div class="sec03 container">
+            <div class="sec03_Item">
+                <div class="sec03_icon">
+                    <i class="fa-solid fa-fish-fins"></i>
+                </div>
+                <div class="sec03_square"></div>
+                <img src="images/sec02_3.jpg" alt="">
+            </div>
+            <div class="sec03_Item">
+                <div class="sec03_icon2">
+                    <i class="fa-solid fa-hourglass"></i>
+                </div>
+                <img src="images/sec02_3.jpg" alt="">
+            </div>
+            <div class="sec03_Item">
+                <img src="images/sec02_3.jpg" alt="">
+            </div>
+            <div class="sec03_Item">
+                <img src="images/sec02_3.jpg" alt="">
+            </div>
         </div>
     </section>
 </body>
