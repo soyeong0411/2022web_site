@@ -258,20 +258,22 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     margin-right: 16px;
     margin-bottom: 16px;
     position: relative;
+    border-radius: 15px;
 
 }
 .sec01 .sec01_Item img{height: 100%;}
 .sec01 .sec01_square{
     width: 233px;height: 240px;
-    background: rgba(6, 37, 7, 0.7);
+    background: rgba(27, 28, 27, 0.5);
     position: absolute;top: 180px;
     transition: 0.3s;
+
 }
-.sec01 .sec01_square a,
-.sec02 .sec02_square a{
+.sec01 .sec01_square a{
     display: block;height: 100%;color: #fff;
-    font-size: 20px;text-align: center;
+    font-size: 19px;text-align: center;
     padding-top: 15px;
+    border-radius: 15px;
 }
 .sec01 .sec01_square p{
     color: #fff;opacity: 0;
@@ -281,14 +283,15 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .sec01 .sec01_Item:hover .sec01_square{
     top: 0;padding-top:calc(50% - 60px);
 }
-.sec01 .sec01_Item:hover p,
-.sec01 .sec01_Item:hover .txt p{
-    top: 110px; left:calc(50% - 70px); text-align: center;
+
+.sec01 .sec01_Item:hover .txt01 p{
+    top: 110px; left:calc(50% - 85px); text-align: center;
     opacity: 1;
-    font-size: 13px;
+    font-size: 14px;
 }
-.sec01 .sec01_Item:hover .txt p{
-    top: 110px; left: calc(50% - 65px); 
+.sec01 .sec01_Item:hover .txt02 p{
+    top: 110px; left: calc(50% - 60px); 
+    opacity: 1;font-size: 14px;text-align: center;
 }
 
 /* sec02 */
@@ -301,6 +304,25 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 .sec02 li img{width: 100%;height: 100%;}
 .sec02 li:nth-child(4),.sec03 li:nth-child(4){margin-right: 0;}
+.sec02 .sec02_square{display: flex;justify-content: center;
+    align-items: center;
+}
+.sec02 .sec02_square a{
+    font-size: 16px;color:#fff;
+    text-align: center;
+    
+}
+.sec02 .sec02_Item{border-radius: 15px;}
+
+.sec02 .circle{
+    display: flex;
+    width: 120px;height: 30px;
+    background-color: rgba(255, 253, 253,0.5);
+    position: absolute;left: 7px;top: 7px;
+    border-radius: 15px;
+}
+.sec02 .circle img{width: 20px;height: 20px;
+    margin: 5px 5px;}
 
 .sec02 .first,.sec02 .second {
     width: 100%;
@@ -327,28 +349,41 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 /* 배경은 rgba값으로 투명도 조절!!!! */
 .sec02 .sec02_square{
     width: 100%;height: 60px;
-    background: rgba(35, 23, 162,0.7);
+    background: rgba(45, 45, 45, 0.7);
     position: absolute;
     bottom: 0;right: 0;
     z-index: 2;
 }
-.sec03{display: flex;}
-.sec03 .sec03_Item{
+
+.searchbarWrap02
+
+
+
+
+.sec03{display: flex;position: relative;}
+.sec03 .item{
     width:233px;height: 240px;
     margin-right: 16px;
     position: relative;
 }
 .sec03 .sec03_Item:last-child{margin-right: 0;}
-.sec03 .sec03_Item img{width: 233px;height: 240px;}
-.sec03 .sec03_Item:hover .sec03_icon{
+.sec03 .item img{width: 233px;height: 240px;}
+.sec03 .sec03_Item01:hover .sec03_icon{
     transform: rotate(-90deg);
     z-index: 1;
 }
-.sec03 .sec03_Item:hover .sec03_icon2{
+.sec03 .sec03_Item02:hover .sec03_icon2,
+.sec03 .sec03_Item03:hover .sec03_icon3
+{
     transform: rotate(-180deg);
     z-index: 1;
 }
-.sec03 .sec03_icon,.sec03 .sec03_icon2{
+.sec03 .sec03_Item04:hover .sec03_icon4{
+    z-index: 1;
+}
+
+.sec03 .sec03_icon,.sec03 .sec03_icon2,
+.sec03 .sec03_icon3,.sec03 .sec03_icon4{
     width: 50px;height: 50px;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
@@ -367,7 +402,49 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     transition: 0.3s;
     opacity: 0;
 }
-.sec03 .sec03_Item:hover .sec03_square{
+
+.sec03 .sec03_square p{position: absolute;top: -100px;}
+.sec03 .sec03_square .info{opacity: 0;transition: 0.3s;}
+
+.sec03 .sec03_Item01:hover .sec03_square,
+.sec03 .sec03_Item02:hover .sec03_square,
+.sec03 .sec03_Item03:hover .sec03_square,
+.sec03 .sec03_Item04:hover .sec03_square{
     top: 0;opacity: 1;
+}
+.sec03 .sec03_Item01:hover a,
+.sec03 .sec03_Item02:hover a,
+.sec03 .sec03_Item03:hover a,
+.sec03 .sec03_Item04:hover a{
+    opacity: 0;
+}
+.sec03 .sec03_Item01:hover .info,
+.sec03 .sec03_Item02:hover .info,
+.sec03 .sec03_Item03:hover .info,
+.sec03 .sec03_Item04:hover .info{
+    opacity: 1;font-size: 23px;color:#fff;
+    position: absolute;top: 25px;left: 55px;
+}
+.sec03 .sec03_Item01:hover p,
+.sec03 .sec03_Item02:hover p,
+.sec03 .sec03_Item03:hover p,
+.sec03 .sec03_Item04:hover p{
+    font-size: 15px;color:#fff;
+    position: absolute;top: 80px;left: 25px;
+}
+
+.sec03 .sec03_Item01:hover .sec03_icon,
+.sec03 .sec03_Item02:hover .sec03_icon2,
+.sec03 .sec03_Item03:hover .sec03_icon3,
+.sec03 .sec03_Item04:hover .sec03_icon4{
+    position: absolute;top:calc(50% - -25px);
+    right: calc(50% - 25px);
+}
+.sec03 .sec03_Item01 a,
+.sec03 .sec03_Item02 a,
+.sec03 .sec03_Item03 a,
+.sec03 .sec03_Item04 a{display: block;
+    position: absolute;top: 35px;left: 55px;
+    font-size: 23px;color:#fff;
 }
 
