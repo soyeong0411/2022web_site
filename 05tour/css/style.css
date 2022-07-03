@@ -5,15 +5,9 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .container{width: 980px;margin: 0 auto;}
 
 /* headerTop */
-.headerTopWrap{
-    /* background-image: url(../images/Philippines_01_0.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover; */
-    background-color: #eaf4f1;
-    }
-
-.headerTop{display: flex;justify-content: space-between;
+.headerTopWrap{background-color: #eaf4f1;}
+.headerTop{
+    display: flex;justify-content: space-between;
     align-items: center;}
 .headerTop a{color:#333;font-size: 14px;}
 
@@ -22,7 +16,9 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     align-items: center;
     width: 320px;height: 60px;
     margin-left: 15px;
+    position: relative;
 }
+
 .headerTop .searchbarWrap{
     position: relative;
 }
@@ -54,12 +50,55 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     display: flex;justify-content: space-between;
     align-items: center;
 }
-.header img{width: 110%;}
-.header .mainMenu li{float:left;
-    margin-right: 40px;
-    font-size: 18px;font-weight: bold;
+.header .mainMenu>ul>li{
+    float:left;height: 90px;
+
 }
-.header .mainMenu li:last-child{margin-right: 0;}
+/* a에게 높이값을 지정해줘야 메뉴가 밑에 만들어 짐!! */
+.header .mainMenu>ul>li>a{
+    display: flex;justify-content: center;align-items: center;
+    height: 90px;padding: 0 20px;
+    font-size: 19px;font-weight: bold;
+
+}
+.headerWrap{position: relative;}
+/* .header .mainMenu>ul{position: relative;} */
+.header .sub_01>ul>li{float:left}
+.sub_01>ul>li>a{
+    display: flex;justify-content: center;align-items: center;
+    height: 50px;padding: 0 13px;
+    font-size: 15px;}
+.header .mainMenu>ul>li:hover .sub_01{
+    display: block;z-index: 1;
+}
+.header .sub_01{display: none;position: absolute;}
+
+.header .sub_01>ul>li::after{
+    content:"";display: block;width: 1px;height: 12px;
+    position: absolute;top: 20px;;background: rgb(176, 176, 176);z-index: 1;
+}
+
+.header .sub_01>ul>li:first-child::after{
+    display: none;
+}
+
+/* .mainMenu>ul>li:nth-child(5) .sub_01{left:calc(50% -100px)} */
+
+.header .mainMenu:hover:after{
+    content:"";display: block;width:100%;height: 50px;
+    position: absolute;  left: 0;;background-color: #ffffff;
+    border-top: 1px solid rgb(151, 151, 151);
+}
+.header .mainMenu>ul>li>a:hover:after{
+    content:"";display: block;width: 40px;height: 5px;
+    position: absolute;bottom: 20px; ;background-color: rgb(60, 129, 102);
+
+}
+/* .header .mainMenu>ul>li:hover:after{
+
+} */
+
+
 
 .header .toggle{display: flex;
     margin: 15px 0;}
@@ -92,7 +131,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 50px 0;}
+    padding: 70px 0;}
 
 #section .ball01,
 #section .ball02,
@@ -262,29 +301,35 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 }
 .sec01 .sec01_Item img{height: 100%;}
-.sec01 .sec01_square{
+
+.sec01 .sec01_square,
+.sec02 .sec02_square_moon{
     width: 233px;height: 240px;
     background: rgba(27, 28, 27, 0.5);
     position: absolute;top: 180px;
     transition: 0.3s;
 
 }
-.sec01 .sec01_square a{
+.sec01 .sec01_square a,
+.sec02 .sec02_square_moon a{
     display: block;height: 100%;color: #fff;
     font-size: 19px;text-align: center;
     padding-top: 15px;
     border-radius: 15px;
 }
-.sec01 .sec01_square p{
+.sec01 .sec01_square p,
+.sec02 .sec02_square_moon p{
     color: #fff;opacity: 0;
     position: absolute;top: 0;
     font-weight: 200;
 }
-.sec01 .sec01_Item:hover .sec01_square{
+.sec01 .sec01_Item:hover .sec01_square,
+.sec02 .sec02_Item_l:hover .sec02_square_moon{
     top: 0;padding-top:calc(50% - 60px);
 }
 
-.sec01 .sec01_Item:hover .txt01 p{
+.sec01 .sec01_Item:hover .txt01 p
+{
     top: 110px; left:calc(50% - 85px); text-align: center;
     opacity: 1;
     font-size: 14px;
@@ -294,6 +339,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     opacity: 1;font-size: 14px;text-align: center;
 }
 
+.sec02.sec02_Item:hover .sec02_square_moon p{
+    top: 110px; left:calc(50% - 95px); text-align: center;
+    opacity: 1;
+    font-size: 14px;
+}
 /* sec02 */
 .sec02 li
 {   float:left;
@@ -312,7 +362,13 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     text-align: center;
     
 }
-.sec02 .sec02_Item{border-radius: 15px;}
+
+.sec01.sec02_Item:hover .txt01 p{
+    top: 110px; left:calc(50% - 85px); text-align: center;
+    opacity: 1;
+    font-size: 14px;
+}
+.sec02.sec02_Item li{border-radius: 15px;}
 
 .sec02 .circle{
     display: flex;
@@ -334,16 +390,29 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .swiper-button-prev::after{display: none;}
 
 .first .swiper-button-prev, 
-.second .swiper-button-prev{position: absolute;left: 0;
-    background-color: rgba(62, 61, 61,0.3);
+.second .swiper-button-prev{
+    position: absolute;left: 175px;top:33px
 }
 
 .first .swiper-button-next,
-.second .swiper-button-next{position: absolute;right: 0;
-    background-color: rgba(62, 61, 61,0.3);
+.second .swiper-button-next{
+    position: absolute;right: 10px;top: 33px;
+}
+.second .swiper-button-prev{
+    left: 172px;
+}
+.second .swiper-button-next{
+    top: 21px;
 }
 
-.sec02 .sec02_Item{
+.first .swiper-button-prev, 
+.second .swiper-button-prev,
+.first .swiper-button-next,
+.second .swiper-button-next img{
+    width: 20px;height: 20px;
+}
+
+.sec02.sec02_Item li{
     position: relative;
 }
 /* 배경은 rgba값으로 투명도 조절!!!! */
@@ -355,7 +424,30 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     z-index: 2;
 }
 
-.searchbarWrap02
+
+.searchbarWrap02{
+    position: absolute;left: calc(50% - 105px);
+    bottom:13px;
+}
+.searchbarWrap02 .inp{
+    width: 210px;height: 28px;
+    border-radius: 15px;
+    text-indent: 25px;
+}
+.searchbarWrap02 p{
+    text-indent: 7px;
+    margin-bottom: 3px;
+}
+.searchbarWrap02 .icon01{
+    font-size: 13px;
+    position: absolute;
+    left: 7px;bottom: 5px;
+}
+.searchbarWrap02 .icon02{
+    font-size: 13px;
+    position: absolute;
+    right: 8px;bottom: 6px;
+}
 
 
 
@@ -403,7 +495,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     opacity: 0;
 }
 
-.sec03 .sec03_square p{position: absolute;top: -100px;}
+.sec03 .sec03_square p{position: absolute;opacity: 0;}
 .sec03 .sec03_square .info{opacity: 0;transition: 0.3s;}
 
 .sec03 .sec03_Item01:hover .sec03_square,
@@ -431,6 +523,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .sec03 .sec03_Item04:hover p{
     font-size: 15px;color:#fff;
     position: absolute;top: 80px;left: 25px;
+    opacity: 1;
 }
 
 .sec03 .sec03_Item01:hover .sec03_icon,

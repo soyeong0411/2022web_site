@@ -44,7 +44,7 @@
             });
         });
     </script>
-    <!-- 날짜 안나올 때, jquery링크확인/date명 확인 -->
+    <!-- 날짜 안나올 때, jquery링크확인(중복확인)/date명 확인 -->
 </head>
 <body>
     <header id="header">
@@ -76,12 +76,61 @@
                 </a></h1>
                 <nav class="mainMenu">
                     <ul class="clearfix">
-                        <li><a href="#">해외패키지</a></li>
-                        <li><a href="#">테마여행</a></li>
-                        <li><a href="#">개별여행</a></li>
-                        <li><a href="#">국내/제주</a></li>
-                        <li><a href="#">항공</a></li>
-                        <li><a href="#">호텔</a></li>
+                        <li><a href="#">해외패키지</a>
+                            <div class="sub_01">
+                                <ul class="clearfix">
+                                    <li><a href="#">동남아/대만</a></li>
+                                    <li><a href="#">일본/몽골/홍콩</a></li>
+                                    <li><a href="#">유럽/아라비아</a></li>
+                                    <li><a href="#">괌/사이판/뉴질랜드</a></li>
+                                    <li><a href="#">미주/캐나다/하와이</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">테마여행</a>
+                            <div class="sub_01">
+                                <ul>
+                                    <li><a href="#">허니문</a></li>
+                                    <li><a href="#">골프</a></li>
+                                    <li><a href="#">에어텔</a></li>
+                                    <li><a href="#">크루즈</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">개별여행</a>
+                            <div class="sub_01">
+                                <ul>
+                                    <li><a href="#">현지투어/패스</a></li>
+                                    <li><a href="#">차량서비스</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">국내/제주</a>
+                            <div class="sub_01">
+                                <ul>
+                                    <li><a href="#">국내여행</a></li>
+                                    <li><a href="#">제주</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">항공</a>
+                            <div class="sub_01">
+                                <ul>
+                                    <li><a href="#">해외항공</a></li>
+                                    <li><a href="#">국내항공</a></li>
+                                    <li><a href="#">공동구매항</a></li>
+                                    <li><a href="#">공권</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">호텔</a>
+                            <div class="sub_01">
+                                <ul>
+                                    <li><a href="#">해외호텔</a></li>
+                                    <li><a href="#">국내호텔</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
                 <div class="toggle">
@@ -338,9 +387,9 @@
                 </li>
             </ul>
         </div>
-        <div class="sec02 container">
+        <div class="sec02 container sec02_Item">
             <ul class="clearfix">
-                <li class="sec02_Item">
+                <li>
                     <div class="swiper first">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
@@ -377,10 +426,10 @@
                           </div>
                         </div>
                         <div class="swiper-button-next">
-                            <img src="images/1.png" alt="">
+                            <img src="images/arrow-n.png" alt="">
                         </div>
                         <div class="swiper-button-prev">
-                            <img src="images/3.png" alt="">
+                            <img src="images/arrow-p.png" alt="">
                         </div>
                       </div>
                       <script>
@@ -393,7 +442,7 @@
                         });
                       </script>
                 </li>
-                <li class="sec02_Item">
+                <li>
                     <div class="swiper second">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
@@ -431,10 +480,10 @@
                           </div>
                         </div>
                         <div class="swiper-button-next">
-                            <img src="images/1.png" alt="">
+                            <img src="images/arrow-n.png" alt="">
                         </div>
                         <div class="swiper-button-prev">
-                            <img src="images/3.png" alt="">
+                            <img src="images/arrow-p.png" alt="">
                         </div>
                       </div>
                       <script>
@@ -447,20 +496,28 @@
                         });
                       </script>
                 </li>
-                <li class="sec02_Item">
+                <li>
                     <div class="searchbarWrap02">
-                        <p>SEARCH</p>
+                        <p>나의 여행지 날씨 검색</p>
                         <form action="#">
-                            <input type="text" name="search" placeholder="날씨검색" class="inp">
+                            <input type="text" name="search" placeholder="여행지 검색" class="inp">
                         </form>
-                        <div class="icon">
+                        <div class="icon01">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                        </div>
+                        <div class="icon02">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                     <img src="images/map3.png" alt="">
                 </li>
-                <li>
-                    <img src="images/sec02_4.jpg" alt="">
+                <li class="sec02_Item_l">
+                    <div class="sec02_square_moon">
+                        <a href="#">[HONEYMOON BEST 11]</a>
+                        <P>힙한 리조트와 관광지를 한번에!<br>
+                        혜택받고 떠나는 여행!</P>
+                    </div>
+                    <img src="images/img13.png" alt="">
                 </li>
             </ul>
         </div>
