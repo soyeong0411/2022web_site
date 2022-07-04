@@ -60,11 +60,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     display: flex;justify-content: center;align-items: center;
     height: 90px;padding: 0 20px;
     font-size: 19px;font-weight: bold;
-
 }
+
 .headerWrap{position: relative;}
 /* .header .mainMenu>ul{position: relative;} */
-.header .sub_01>ul>li{float:left}
+.header .sub_01>ul>li{float:left;}
 .sub_01>ul>li>a{
     display: flex;justify-content: center;align-items: center;
     height: 50px;padding: 0 13px;
@@ -72,6 +72,8 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .header .mainMenu>ul>li:hover .sub_01{
     display: block;z-index: 1;
 }
+
+
 .header .sub_01{display: none;position: absolute;}
 
 .header .sub_01>ul>li::after{
@@ -90,14 +92,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     position: absolute;  left: 0;;background-color: #ffffff;
     border-top: 1px solid rgb(151, 151, 151);
 }
-.header .mainMenu>ul>li>a:hover:after{
+.header .mainMenu>ul>li>a:hover:after,.header .mainMenu>ul>li>a.active:after{
     content:"";display: block;width: 40px;height: 5px;
     position: absolute;bottom: 20px; ;background-color: rgb(60, 129, 102);
-
 }
-/* .header .mainMenu>ul>li:hover:after{
 
-} */
 
 
 
@@ -453,14 +452,25 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 /* sec03 */
 .sec03 li{
-    float:left;
-    width:233px;height: 240px;
+    float: left;
     margin-right: 16px;
-    position: relative;
-    border-radius: 15px
 }
 .sec03 li:last-child{margin-right: 0;}
+.sec03.sec03_Item img{
+    width: 233px;height: 240px;
+    border-radius: 15px;}
 
+    
+
+
+
+
+
+
+
+
+
+/* 
 .sec03 .sec03_Item01:hover .sec03_icon{
     transform: rotate(-90deg);
     z-index: 1;
@@ -473,9 +483,9 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 .sec03 .sec03_Item04:hover .sec03_icon4{
     z-index: 1;
-}
+} */ */
 
-.sec03 .sec03_icon,.sec03 .sec03_icon2,
+/* .sec03 .sec03_icon,.sec03 .sec03_icon2,
 .sec03 .sec03_icon3,.sec03 .sec03_icon4{
     width: 50px;height: 50px;
     border: 2px solid rgb(255, 255, 255);
@@ -504,8 +514,8 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .sec03 .sec03_Item02:hover .sec03_square,
 .sec03 .sec03_Item03:hover .sec03_square,
 .sec03 .sec03_Item04:hover .sec03_square{
-    top: 0;opacity: 1;
-}
+    top: 0;opacity: 1; */
+/* }
 .sec03 .sec03_Item01:hover a,
 .sec03 .sec03_Item02:hover a,
 .sec03 .sec03_Item03:hover a,
@@ -541,7 +551,19 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .sec03 .sec03_Item04 a{display: block;
     position: absolute;top: 35px;left: 55px;
     font-size: 23px;color:#fff;
-}
+} */
+
+ */
+
+
+
+
+
+
+
+
+
+
 
 /* subpage */
 
@@ -549,8 +571,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .contents.subpage .textWrap{
     text-align: center;
     color:#fff;
-    padding: 150px 0
 }
+.contents.subpage .visual{
+    padding: 150px 0;
+}
+
 .contents.subpage h3{
     font-size: 52px;margin-bottom: 15px;
 }
@@ -563,6 +588,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .contents.subpage .section img{width: 980px;}
 
 
+
 .contents.package .visual{
     background-image: url(../images/Philippines_01.jpg);
 }
@@ -571,12 +597,14 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 .contents.package .textWrap
 {
-    color:#333
+    color:#333;
+    transform: translateY(-50px);
 }
+
 .contents.tour .textWrap,
 .contents.hotel .textWrap
 {
-    padding: 80px 0;
+    transform: translateY(-50px);
 }
 .contents.tour .visual{
     background-image: url(../images/939.png);
