@@ -518,15 +518,19 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     font-size: 16px;
     color:#fff;
     font-weight: lighter;
+    text-align: center;
 }
-/* .sec03 .text{opacity: 0;}
-.sec03 .sec03_square:hover .text{
-    opacity: 1;
-} */
+
+.sec03 li:nth-child(3) p{
+    position: absolute;top: 90px;left: 45px;
+}
+.sec03 li:nth-child(4) p{
+    position: absolute;top: 110px;left: 40px;
+}
 
 .footerWrap{padding: 40px 0;}
 .footer{display: flex;justify-content: space-around;}
-.footer h1{width: 300px;margin-top: 70px;}
+.footer h1{width: 350px;margin-top: 70px;}
 .footer h1 img{width: 80%;}
 .footer .foottxt{font-size: 15px;}
 
