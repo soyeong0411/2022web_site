@@ -1,4 +1,7 @@
-
 body{
     font-family: 'Noto Serif KR', serif;
+}
+
+#header{
+    height: 200px;background-color: #000;
 }
