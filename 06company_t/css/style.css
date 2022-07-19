@@ -1,0 +1,91 @@
+@charset "utf-8";
+/********** css responsive init **********/
+
+body{
+    font-family: 'Noto Serif KR', serif;
+}
+
+.container{width: 1260px;margin: 0 auto;}
+
+/* header */
+#header{position: fixed;background: #fff;width: 100%;}
+
+.navbarWrap{display: flex;
+    padding: 20px 0;}
+.navbar>ul{display: flex;height: 100%;}
+
+/* a태그를 키워서 메뉴선정하는것이 좋음 */
+.navbar>ul>li>a{display: flex;height: 100%;
+justify-content: center;align-items: center;
+padding: 0 20px;font-size: 18px;}
+.navbar>ul>li .submenu{
+    background-color: pink;
+    position: absolute;top: 43px;width: 100%;
+    padding: 10px 10px 20px 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+/* 메뉴가 opacity값으로 0을 줬을 때 메뉴가기만해도 보이므로 hidden */
+}
+.submenu li{display: block;line-height: 40px;text-align: center;}
+.navbar>ul>li{position: relative;}
+.navbar>ul>li:hover .submenu{
+    transform: translateY(0px);
+transition: .3s;
+opacity: 1;visibility:visible}
+.navbar>ul>li:hover .aBar{
+    transform: scale(1);
+
+}
+.navbar>ul>li .aBar{
+    position: absolute;width: 100%;height: 3px;background: red;
+    bottom: 0;transform: scale(0);
+    transition: .3s;
+}
+.navbar{margin-left: auto;}
+.toggle{width: 40px;height: 40px;
+    background: pink;
+    justify-content: center;align-items: center;
+    display: none;
+}
+.toggle div{width: 24px;height: 3px;background: #000;
+position: absolute;border-radius: 12px;}
+.toggle .bar1{transform: translateY(-8px);}
+.toggle .bar3{transform: translateY(8px);}
+
+/* visual */
+.visualWrap{background-image: url(../images/mainimg01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+
+
+/********** css responsive **********/
+@media (max-width: 1399px) {
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+    
+}
+
+@media (max-width: 767px) {
+    .container{width: 100%;}
+    .navbar{display: none;}
+    .toggle{display: flex;
+        margin-left: auto;
+        margin-top: 3px;}
+    .navbarWrap{padding: 10px 20px;}
+}
+
+@media (max-width: 575px) {
+
+}
