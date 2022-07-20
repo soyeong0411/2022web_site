@@ -1,7 +1,89 @@
-body{
-    font-family: 'Noto Serif KR', serif;
+@charset "utf-8";
+/********** css responsive init **********/
+
+/* common */
+body{font-family: 'Noto Sans KR', sans-serif;
+background: #D7CFB5;}
+.container{width: 1260px;margin: 0 auto;}
+
+
+
+
+/* header */
+
+#header{position:fixed;width: 100%;z-index: 2;}
+.headerWrap{
+    width: 1800px;height: 100px;margin: 0 auto;
+    display: flex;padding: 20px 0;
+
+}
+.headerWrap h1 img{width: 272px;height: 60px;}
+
+.h_MenuWrap{margin-left: auto;}
+.h_MenuWrap>ul{display: flex;height: 100%;}
+
+.h_MenuWrap>ul>li>a{
+    color:#fff;font-size: 18px;
+    font-weight: 400;
+}
+.h_MenuWrap>ul>li>a,.iconMenu>ul>li>a{
+
+    display: flex;justify-content: center;align-items: center;
+    height: 100%;padding: 0 15px;
+}
+.iconMenu>ul{display: flex;height: 100%;}
+
+.notice{width: 100%;height: 60px;background: #000;}
+
+.h_MenuWrap .subpage{display: none;}
+.h_MenuWrap>ul>li.on .subpage{display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********** css responsive **********/
+@media (max-width: 1399px) {
+
 }
 
-#header{
-    height: 200px;background-color: #000;
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
 }

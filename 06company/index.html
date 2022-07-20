@@ -10,24 +10,26 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.css" integrity="sha512-5TGRCl3hPoqtruhO+mubTuySHOfcEBvyIfiWHoCK8wDLmf6C1U73OUoNCU6ZvyT/8vfCcha1INDIo8dabDmQjw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js" integrity="sha512-naEQG74IcOLQ6K/B1PmhIcZ4i3YE2FXs2zm603E1Q3shbron+PmYLg44/q+xAymD/RvskZ2H8l1Qa7I5qELlrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header id="header">
         <div class="headerWrap">
             <h1><a href="./"><img src="images/logo_w.png" alt=""></a></h1>
-            <nav class="headerMenu">
-                <ul>
+            <nav class="h_MenuWrap">
+                <ul class="headerMenu">
                     <li><a href="#">조 말론 런던의 가치</a>
-                        <ul>
+                        <ul class="subpage">
                             <li><a href="#">우리의 자선활동 미션</a></li>
                             <li><a href="#">우리의 사람 & 일터</a></li>
                             <li><a href="#">지속가능성을 위한 활동</a></li>
                         </ul>
                     </li>
                     <li><a href="#">조 말론 스토리</a>
-                        <ul>
+                        <ul class="subpage">
                             <li><a href="#">PEOPLE</a></li>
                             <li><a href="#">LIFESTYLE</a></li>
                             <li><a href="#">STORY</a></li>
@@ -35,7 +37,7 @@
                         </ul>
                     </li>
                     <li><a href="#">쇼핑하기</a>
-                        <ul>
+                        <ul class="subpage">
                             <li><a href="#">신제품</a></li>
                             <li><a href="#">베스트셀러</a></li>
                             <li><a href="#">센트</a></li>
@@ -43,7 +45,7 @@
                         </ul>
                     </li>
                     <li><a href="#">선물하기</a>
-                        <ul>
+                        <ul class="subpage">
                             <li><a href="#">기프트파인더</a></li>
                             <li><a href="#">센트파인더</a></li>
                             <li><a href="#">퍼스널라이제이션</a></li>
@@ -51,7 +53,7 @@
                         </ul>
                     </li>
                     <li><a href="#">소셜네트워크</a>
-                        <ul>
+                        <ul class="subpage">
                             <li><a href="#">인스타그램</a></li>
                             <li><a href="#">페이스북</a></li>
                             <li><a href="#">유튜브</a></li>
@@ -61,9 +63,9 @@
             </nav>
             <div class="iconMenu">
                 <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <li><a href="#"><img src="images/icon_search_s.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/icon_mypage_s.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/icon_cart_s.png" alt=""></a></li>
                 </ul>
             </div>
             <div class="toggle">
@@ -71,6 +73,27 @@
             </div>
         </div>
     </header>
+    <div class="visual">
+        <div class="swiper first">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/slide01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide02.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide03.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="notice"></div>
+    </div>
+    <section style="height: 500px;">
+
+    </section>
 
 <script src="js/script.js"></script>
 
