@@ -8,7 +8,10 @@ body{
 .container{width: 1260px;margin: 0 auto;}
 
 /* header */
-#header{position: fixed;width: 100%;}
+#header{
+    position: fixed;width: 100%;
+    background: #fff;z-index: 2;
+    }
 
 .navbarWrap{display: flex;
     padding: 20px 0;}
@@ -61,7 +64,85 @@ position: absolute;border-radius: 12px;}
     height: 100vh;
 }
 
+/* contents */
+
+.contents>ul{display: flex;flex-wrap: wrap;position: relative;}
+.contents>ul>li{
+    flex-grow: 1;
+    flex-basis: 25%;
+    border: 1px solid #000;
+    height: 310px;
+}
+.contents>ul>li:nth-child(3),.contents>ul>li:nth-child(6),
+.contents>ul>li:nth-child(8),.contents>ul>li:nth-child(11){
+    flex-basis:auto;
+    width: 50%;
+    flex-grow: 0;
+    /* flex-basis: 50% */
+}
+.contents>ul>li:nth-child(7){
+    height: 620px;
+}
+.contents>ul>li:nth-child(10){
+    flex-grow: 0;
+    position: absolute;right: 620px;bottom: 0;
+    width: 310px;
+}
+.contents>ul>li:nth-child(11){
+    flex-grow: 0;
+    position: absolute;right: 0;bottom: 0;
+    width: 620px;
+}
 .navbarClone,.overlay{display: none;}
+
+.contents>ul>li:nth-child(1),
+.contents>ul>li:nth-child(4),
+.contents>ul>li:nth-child(5),
+.contents>ul>li:nth-child(9),
+.contents>ul>li:nth-child(10){
+    
+    display: flex;justify-content: center;align-items: center;
+
+}
+
+.contents>ul>li:nth-child(1) img,
+.contents>ul>li:nth-child(4) img,
+.contents>ul>li:nth-child(5) img,
+.contents>ul>li:nth-child(9) img,
+.contents>ul>li:nth-child(10) img
+{margin: 0 auto;margin-bottom: 10px;}
+
+
+.contents>ul>li:nth-child(1){
+    background: #92c1d5;
+}
+.contents>ul>li:nth-child(4){
+    background: #b8307c;
+}
+.contents>ul>li:nth-child(5){
+    background: #413d3e;
+}
+.contents>ul>li:nth-child(9){
+    background: #b8307c;
+}
+.contents>ul>li:nth-child(10){
+    background: #92c1d5;
+}
+
+.contents>ul>li:nth-child(2){
+    background: url(../images/img01_01.jpg) no-repeat center;
+    display: flex;justify-content: center;align-items: center;
+}
+.contents>ul>li:nth-child(2) img{transition: .3s;}
+.contents>ul>li:nth-child(2):hover img{
+    transform: scale(1.2);
+}
+
+
+/* common */
+
+.bg_gray{background: #eee !important;}
+
 
 
 
