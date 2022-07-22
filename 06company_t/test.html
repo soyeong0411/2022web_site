@@ -12,6 +12,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../04college/js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(function(){
+            $(".slider").bxSlider({
+
+            })
+            })
+            
+            $(".next").click(function(){
+                slide.goToNextSlide();
+            });
+
+            $(".prev").click(function(){
+                slide.goToPrevSlide();
+            });
+       
+    </script>
 </head>
 <body>
     <header id="header">
@@ -92,7 +110,42 @@
             <li>
                 <img src="images/icon01_06.png" alt="">
             </li>
-            <li>3</li>
+            <li>
+                <ul class="slider">
+                    <li class="sItems">
+                        <div class="sTxt">
+                            <div class="txt">
+                                <h3>뉴스</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, autem!</p>
+                            </div>
+                        </div>
+                        <div class="sImg"><img src="images/img01_02.jpg" alt=""></div>    
+                    </li>
+                    <li class="sItems">
+                        <div class="sTxt">
+                            <div class="txt">
+                                <h3>뉴스</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, autem!</p>
+                            </div>
+                        </div>
+                        <div class="sImg"><img src="images/img01_02.jpg" alt=""></div>    
+                    </li>
+                    <li class="sItems">
+                        <div class="sTxt">
+                            <div class="txt">
+                                <h3>뉴스</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, autem!</p>
+                            </div>
+                        </div>
+                        <div class="sImg"><img src="images/img01_02.jpg" alt=""></div>    
+                    </li>
+                </ul>
+                <!-- 버튼은 슬라이드 밖영역에 -->
+                <div class="sBtn">
+                    <div class="prev"><img src="images/btn01_01.jpg" alt=""></div>
+                    <div class="next"><img src="images/btn01_02.jpg" alt=""></div>
+                </div>
+            </li>
             <li>4</li>
             <li>5</li>
             <li style="background-image: url(images/img01_03.jpg);">6</li>
