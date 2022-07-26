@@ -1,10 +1,11 @@
 
 $(".menubg").hide();
 $(".h_MenuWrap>ul>li").hover(function(){
-    $(".menubg,.h_MenuWrap .submenu").stop().slideDown();
+    $(".menubg").stop().slideDown();
+    $(".h_MenuWrap .submenu").stop().delay(100).slideDown();
     $(this).addClass("on");
 },function(){
-    $(".menubg,.h_MenuWrap .submenu").stop().slideUp();
+    $(".menubg,.h_MenuWrap .submenu").stop().hide();
     $(this).removeClass("on");
 })
 
@@ -21,15 +22,15 @@ $(".m_MenuBg").click(function(){
 $(".h_MenuWrap>ul").clone().appendTo(".m_Menu")
 
 
-$(".headerMenu>li>a").click(function(e){
+$(".m_Menu>ul>li>a").click(function(e){
     e.preventDefault();
 
-    $(".headerMenu>li>a").parent().find(".submenu").stop().slideUp()
+    $(".m_Menu>ul>li>a").parent().find(".submenu").stop().slideUp()
     if($(this).hasClass("active")){
-        $(".headerMenu>li>a").removeClass("active")
+        $(".m_Menu>ul>li>a").removeClass("active")
     }else{
         $(this).parent().find(".submenu").stop().slideDown()  // .show
-        $(".headerMenu>li>a").removeClass("active")
+        $(".m_Menu>ul>li>a").removeClass("active")
         $(this).addClass("active")
     }
 })
@@ -43,4 +44,16 @@ var swiper = new Swiper(".first", {
     prevEl: ".swiper-button-prev",
   },
 });
+var swiper = new Swiper(".second", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 
