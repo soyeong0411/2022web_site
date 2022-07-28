@@ -44,6 +44,7 @@ var swiper = new Swiper(".first", {
     prevEl: ".swiper-button-prev",
   },
 });
+
 var swiper = new Swiper(".second", {
     loop: true,
     autoplay: {
@@ -53,6 +54,46 @@ var swiper = new Swiper(".second", {
     navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+});
+
+var swiper = new Swiper(".m_first", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },pagination: {
+    el: ".swiper-pagination",
+  },
+});
+var swiper = new Swiper(".m_second", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },pagination: {
+    el: ".swiper-pagination",
+  },
+});
+var swiper = new Swiper(".m_third", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },pagination: {
+    el: ".swiper-pagination",
   },
 });
 
