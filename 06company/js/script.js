@@ -57,6 +57,23 @@ var swiper = new Swiper(".second", {
   },
 });
 
+var swiper = new Swiper(".third", {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 0,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+
+
 var swiper = new Swiper(".m_first", {
     loop: true,
     autoplay: {
@@ -96,5 +113,12 @@ var swiper = new Swiper(".m_third", {
     el: ".swiper-pagination",
   },
 });
+
+$(".sub_menu>ul>li").click(function(e){
+    e.preventDefault();
+
+  $(".sub_contents>div").hide();     // 있어야 내용이 겹치게 나오지 않고 index값에 맞는 내용이 출력
+  $(".sub_contents>div").eq($(this).index()).show();
+})
 
 
