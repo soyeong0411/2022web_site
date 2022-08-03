@@ -1,13 +1,28 @@
 
 $(".menubg").hide();
-$(".h_MenuWrap>ul>li").hover(function(){
-    $(".menubg").stop().slideDown();
-    $(".h_MenuWrap .submenu").stop().delay(100).slideDown();
+$(".h_MenuWrap>ul").hover(function(){
+  $(".h_MenuWrap .submenu").stop().slideDown();
+  $(".menubg").stop().slideDown();
     $(this).addClass("on");
 },function(){
     $(".menubg,.h_MenuWrap .submenu").stop().hide();
     $(this).removeClass("on");
 })
+
+$(window).scroll(function(){
+  let scrollY = window.pageYOffset;
+
+  if(scrollY > 500){
+     // $(".header").attr("style","position:fixed")
+      $(".headerWrap").addClass("fixed");
+  }else{
+    // $(".header").attr("style","")
+      $(".headerWrap").removeClass("fixed");
+  }
+
+})
+
+
 
 $(".toggle").click(function(){
     $(".h_menuClone").css("left",0)
@@ -39,11 +54,17 @@ $(".m_Menu>ul>li>a").click(function(e){
 //first-slide
 var swiper = new Swiper(".first", {
     loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
     navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
+ 
+
 
 var swiper = new Swiper(".second", {
     loop: true,
