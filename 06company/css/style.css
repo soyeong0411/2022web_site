@@ -14,7 +14,7 @@ background: #D7CFB5;}
 #header{position:fixed;width: 100%;z-index: 2;}
 .headerWrap{display: flex;padding: 30px 60px;
 transition: .3s;}
-.headerWrap.fixed{padding: 10px 60px;background: rgba(26, 25, 25, 0.5);}
+.headerWrap.fixed{padding: 10px 60px;background: rgba(26, 25, 25, 0.8);}
 .headerWrap.fixed h1>a>img{width: 200px;height: 45px;}
 .headerWrap h1 img{width: 260px;height: 55px;transition: .3s;}
 
@@ -180,7 +180,7 @@ background: #C6D4E5;}
 
 .section_top div,.section_bottom div{position: relative;}
 .section_top .main01_txt{
-    position: absolute;bottom: 30px;left: 20px;
+    position: absolute;bottom: 30px;left: 40px;
 }
 .section_top .main01_txt .line{
     width: 115%;height: 3px;background: #fff;
@@ -204,7 +204,7 @@ background: #C6D4E5;}
     margin-left: -20px;margin-top: 5px;
 }
 .section_top .main03_txt{
-    position: absolute;left: 20px;top: 20px;
+    position: absolute;left: 90px;bottom: 30px;
 }
 .section_top .main03_txt a{
     color: #fff;font-weight: 500;font-size: 22px;
@@ -243,6 +243,7 @@ background: #C6D4E5;}
     display: flex;justify-content: center;align-items: center;
     flex-direction: column;
     text-align: center;
+    padding: 20px;
 }
 .section_bottom .main09 .textWrap{
     border: 1px solid #9E8F89;
@@ -254,7 +255,7 @@ background: #C6D4E5;}
 .section_bottom .main06 .textWrap h3,
 .section_bottom .main09 .textWrap h3,
 .section_bottom .main11 .textWrap h3{
-    font-size: 26px;font-weight: 400;
+    font-size: 22px;font-weight: 400;
     margin-top: -30px;margin-bottom: 10px;
 }
 .section_bottom .main11 .textWrap h3{
@@ -272,7 +273,7 @@ background: #C6D4E5;}
 .section_bottom .main06 .textWrap p,
 .section_bottom .main09 .textWrap p,
 .section_bottom .main11 .textWrap p{
- font-size: 18px;
+ font-size: 16px;
 }
 
 .sec02Wrap{
@@ -301,9 +302,11 @@ background: #C6D4E5;}
 }
 
 .sec02Wrap .sec02_items{
-    display: flex;justify-content: space-around;
+    display: flex;justify-content: space-between;
 
 }
+.sec02Wrap .sec02_items img{width: 240px;}
+
 
 .sec02Wrap .sec02_items li{
     display: flex;justify-content: center;align-items: center;
@@ -335,7 +338,7 @@ background: #C6D4E5;}
     font-size: 48px;padding: 30px 0;text-align: center;
 }
 .sec03Wrap .sec03_item01 p{
-    font-size: 20px;
+    font-size: 20px;margin-bottom: 15px;
 }
 
 .sec03Wrap .sec03_item02{
@@ -346,23 +349,36 @@ background: #C6D4E5;}
     display: flex;justify-content: center;align-items: center;}
 
 .sec03Wrap .sec03_item{
-    position: relative;
+    position: relative;  display: flex;justify-content: center;
+    align-items: center;flex-direction: column;
     
 }
-.sec03Wrap .sec03_b_txt{
-    position: absolute; color:#fff;text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.55);
-    top: 50%;left: 50%;transform: translate(-50%,-50%);
-    text-align: center;
+.sec03Wrap .sec03_b_txt{position: absolute;
+    text-align: center;color:#fff;
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.55);
 }
-.sec03Wrap .sec03_b_txt a{color:#fff}
 
+.sec03Wrap .sec03_b_txt a{display: block;color:#fff;
+padding: 15px 0;font-size: 30px;}
+.sec03Wrap .sec03_b_txt p{
+    font-size: 18px;
+}
 
 .footlogo img{width: 280px;height: 120px;}
 .footerWrap{display: flex;justify-content: center;align-items: center;}
+.footlogo{width: 400px;display: flex;justify-content: center;align-items: center;}
 .foottxt ul{
     display: flex;justify-content: space-between;align-items: center;
-    padding: 0 0 20px 0;width: 550px;
+    width: 600px;margin-bottom: 18px;
 }
+.foottxt li{
+    position: relative;
+}
+.foottxt li::after{content: "";clear: both;display: block;
+    width: 1px;height: 15px;background:#6c6c6c;
+    position: absolute;left: -20px;top: 6px
+}
+.foottxt li:first-child:after{display: none;}
 .foottxt{padding: 50px 0 50px 100px;}
 
 /* subpage */
@@ -636,6 +652,7 @@ text-decoration:underline;margin-top: -15px;
     .m_footer{display: flex;justify-content: center;align-items: center;
     flex-direction: column;background:#F1EBD7;padding: 30px 0;}
     .m_footer img{width: 200px;height: 100px;margin-bottom: 20px;}
+
     .m_foottxt ul{width: 130px;;display: flex;justify-content: space-between;}
     .m_foottxt li{text-decoration: underline;}
     .s_bar{display: none;}
