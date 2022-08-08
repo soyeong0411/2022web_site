@@ -13,10 +13,8 @@ $(window).scroll(function(){
   let scrollY = window.pageYOffset;
 
   if(scrollY > 500){
-     // $(".header").attr("style","position:fixed")
       $(".headerWrap").addClass("fixed");
   }else{
-    // $(".header").attr("style","")
       $(".headerWrap").removeClass("fixed");
   }
 
