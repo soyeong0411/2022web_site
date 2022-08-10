@@ -6,3 +6,4 @@
 1. hyundai https://yycinm.github.io/studio/
 1. tour https://soyeong0411.github.io/2022web_site/05tour
 1. company https://soyeong0411.github.io/2022web_site/06company
+1. binggrae https://soyeong0411.github.io/2022web_site/07binggrae
