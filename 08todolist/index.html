@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo0811</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .todolist{
+            width: 400px;height: 400px;margin: 0 auto;
+        }
+        .title{
+            display: flex;justify-content: center;align-items: center;
+            color:rgb(255, 103, 103);
+            width: 100%;height: 60px;background: rgb(255, 222, 222);            
+        }
+        .contents{
+            background: rgb(255, 239, 239);
+        }
+
+        /* gap은 flex 됐을 때, 부모에게 gap 주기 */
+        .menu{
+            width: 100%;height: 40px;
+            display: flex;align-items: center;
+            background:white;
+            /* gap:5px */
+        }
+
+        /* li에 height 값을 줘야 a태그에 높이값도 li만큼 지정됨 */    
+        .menu li{height: 100%;border-radius: 10px 10px 0 0 ;}
+        .menu li a{
+            height: 100%;padding: 10px;
+            display: flex;justify-content: center;align-items: center;
+            color:white;font-weight: bold;
+        }
+        .menu li:first-child{background:rgb(254, 126, 126)}
+        .menu li:last-child{background:rgb(253, 179, 179)}
+
+        .menuCon .item_todo>li .active{
+            text-decoration: line-through;color:gray;
+        }
+        .menuCon .item_todo>li{position: relative;}
+        .menuCon .item_todo .checkIcon{
+            position: absolute;right: 10px;top: 10px;}
+
+        .menuCon .checkIcon .fa-xmark{font-size: 22px;}
+        .menuCon .checkIcon .fa-eraser{font-size: 19px;}
+        .menuCon .checkIcon .fa-trash{font-size: 17px;}
+
+        .insert{
+            height: 35px;display: flex;justify-content: center;
+            gap:5px
+        }
+        .inp{
+            flex-grow:1;border-radius: 8px;border: 1px solid rgb(125, 60, 60);
+            text-indent: 10px;
+        }
+        .inpbtn,.modbtn{width: 100px;font-size: 18px;}
+        .modbtn{display: none;}
+        .item_todo li{border-bottom: 1px solid #000;padding: 10px;}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="todolist">
+        <div class="title">
+            <h1>ToDoList</h1>
+        </div>
+        <div class="contents">
+            <div class="tabMenu">
+                <ul class="menu">
+                    <li><a href="#">ToDo</a></li>
+                    <li><a href="#">MeMo</a></li>
+                </ul>
+            </div>
+            <div class="insert">
+                <input type="hidden" class="idxnum">
+                <input type="text" class="inp">
+                <button class="inpbtn">ToDo</button>
+                <button class="modbtn">Modify</button>
+            </div>
+            <div class="menuCon">
+                <ul class="items">
+                    <li>
+                        <ul class="item_todo">
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="item_Memo">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    
+        const item_todo = document.querySelector(".item_todo");
+        const inp = document.querySelector(".inp");
+        const inpbtn = document.querySelector(".inpbtn");
+        const idxnum = document.querySelector(".idxnum");
+        const modbtn = document.querySelector(".modbtn");
+
+           
+    
+        const todoData = [
+            {
+                todo:"Github todo리스트 추가",
+                done:true
+            },
+            {
+                todo:"sample array data 작성",
+                done:false
+            },
+            {
+                todo:"todolist layout html/css markup",
+                done:false
+            },
+            {
+                todo:"view()함수 작성하여 화면출력",
+                done:true
+            },
+            {
+                todo:"data insert를 위한 input data, push() 실행",
+                done:false
+            },
+            {
+                todo:"localstorage를 활용하여 data 입출력",
+                done:true
+            },
+            {
+                todo:"del(), done() 등 함수 작성",
+                done:false
+            },
+        ]
+
+        inpbtn.addEventListener("click",function(){
+
+            if(inp.value != ""){
+                let value = {"todo":inp.value,"done":false}
+                
+                todoData.push(value);
+
+            }else{
+                alert("할일을 입력하세요!");
+                inp.focus();
+            }
+            inp.value = "";
+            view();
+
+        })
+
+        modbtn.addEventListener("click",function(){
+
+            todoData[idxnum.value].todo = inp.value;  // idxnum.value에 저장되어 있는 index값을 불러옴
+
+            inpbtn.style.display = "block";
+            modbtn.style.display = "none";
+
+            view();
+
+            inp.value = "";
+        })
+
+
+
+        function view(){
+            let todoView = "";
+
+            todoData.forEach(function(item,i){
+                todoView += `<li>`
+
+                    if(todoData[i].done == true){
+                        todoView += `<div class="active" onclick="done(${i})"><i class="fa-regular fa-square-check"></i> ${todoData[i].todo}</div>`
+                    }else{
+                        todoView += `<div class="" onclick="done(${i})"><i class="fa-regular fa-square-check"></i> ${todoData[i].todo}</div>`
+                    }
+                
+                todoView += `<div class="checkIcon">`
+
+                    if(todoData[i].done == true){
+                        todoView += `<a href="#" onclick="done(${i})"><i class="fa-solid fa-xmark"></i></a>
+                        `
+                    }else{
+                        todoView += `<a href="#" onclick="done(${i})"><i class="fa-solid fa-circle-dot"></i></a>
+                        `
+                    }
+
+                todoView += `<a href="#" onclick="mod(${i},'${todoData[i].todo}')"><i class="fa-solid fa-eraser"></i></a>
+                            <a href="#" onclick="del(${i})"><i class="fa-solid fa-trash"></i></a>`
+
+              todoView += `</div>
+                        </li>`
+
+            })
+            item_todo.innerHTML = todoView;
+        }
+
+        view();
+
+
+        // i 값이 index 안에 들어와서 함수 실행
+        function done(index){
+            todoData[index].done = !todoData[index].done;
+            view();
+        }
+
+        function del(index){
+            todoData.splice(index,1);
+            view();
+        }
+
+        function mod(index,todo){
+            idxnum.value = index;  // index(클릭하면 받아오는 index값이 안에 있음)를 idxnum에 넣음
+            inp.value = todo;      // 그리고 그 인덱스에 todo를 inp.value에 넣어줌(화면출력)
+
+            inpbtn.style.display = "none";
+            modbtn.style.display = "block";
+
+            view();
+        }
+
+
+    
+    </script>
+
+
+</body>
+</html>
