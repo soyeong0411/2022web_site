@@ -8,6 +8,21 @@
 }
 
 body{font-family: 'Binggrae';}
-.headerWrap{width: 1760px;margin: 0 auto;}
 
-/* .submenu{display: none;} */
+/* visual */
+.visual{height: 1000px;
+    background: url(../images/section01_bg.png) no-repeat center / cover;
+    /* background: color image repeat position/size attachment; */
+}
+.bg_logo{
+    position: absolute;top: 50%;left: 50%;
+    transform: translate(-50%, -80%);}
+
+.nav-item a{
+    font-size: 20px;font-weight: 600;
+    color:#333;
+    padding: 25px !important;
+}
+
+/* subpage */
+.submenu{display: none;}
