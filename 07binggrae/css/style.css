@@ -7,10 +7,17 @@
     font-style: normal;
 }
 
-body{font-family: 'Binggrae';}
+body{font-family: 'Binggrae','sans-serif';}
+
+/* header */
+.nav-item>a{
+    font-size: 22px;font-weight: 600;
+    color:#333;
+    padding: 25px !important;
+}
 
 /* visual */
-.visual{height: 1000px;
+.visual{height: 800px;
     background: url(../images/section01_bg.png) no-repeat center / cover;
     /* background: color image repeat position/size attachment; */
 }
@@ -18,11 +25,13 @@ body{font-family: 'Binggrae';}
     position: absolute;top: 50%;left: 50%;
     transform: translate(-50%, -80%);}
 
-.nav-item a{
-    font-size: 20px;font-weight: 600;
-    color:#333;
-    padding: 25px !important;
+/* section */
+.sec01 .sec01_item img{
+    width: 251px;height: 251px;
 }
+.sec01 h1,.sec02 h1{font-weight: 800;}
+.sec01 p{font-size: 18px;}
 
-/* subpage */
-.submenu{display: none;}
+
+
+
