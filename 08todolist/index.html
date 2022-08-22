@@ -64,7 +64,7 @@
         .modbtn{display: none;}
         .item_todo li{border-bottom: 1px solid #000;padding: 10px;}
 
-
+        .memo{display: none;}
     </style>
 </head>
 <body>
@@ -80,20 +80,26 @@
                     <li><a href="#">MeMo</a></li>
                 </ul>
             </div>
-            <div class="insert">
-                <input type="hidden" class="idxnum">
-                <input type="text" class="inp">
-                <button class="inpbtn">ToDo</button>
-                <button class="modbtn">Modify</button>
-            </div>
             <div class="menuCon">
                 <ul class="items">
-                    <li>
+                    <li class="todo">
+                        <div class="insert">
+                            <input type="hidden" class="idxnum">
+                            <input type="text" class="inp">
+                            <button class="inpbtn">ToDo</button>
+                            <button class="modbtn">Modify</button>
+                        </div>
                         <ul class="item_todo">
                             
                         </ul>
                     </li>
-                    <li>
+                    <li class="memo">
+                        <div class="insert">
+                            <input type="hidden" class="idxnum">
+                            <input type="text" class="inp">
+                            <button class="inpbtn">ToDo</button>
+                            <button class="modbtn">Modify</button>
+                        </div>
                         <ul class="item_Memo">
                             
                         </ul>
@@ -150,14 +156,14 @@
                 let value = {"todo":inp.value,"done":false}
                 
                 todoData.push(value);
+                inp.value = "";
+
+                view();
 
             }else{
                 alert("할일을 입력하세요!");
                 inp.focus();
             }
-            inp.value = "";
-            view();
-
         })
 
         modbtn.addEventListener("click",function(){
@@ -175,6 +181,7 @@
 
 
         function view(){
+
             let todoView = "";
 
             todoData.forEach(function(item,i){
@@ -212,25 +219,43 @@
         // i 값이 index 안에 들어와서 함수 실행
         function done(index){
             todoData[index].done = !todoData[index].done;
+
             view();
         }
 
         function del(index){
             todoData.splice(index,1);
+
             view();
         }
 
         function mod(index,todo){
             idxnum.value = index;  // index(클릭하면 받아오는 index값이 안에 있음)를 idxnum에 넣음
             inp.value = todo;      // 그리고 그 인덱스에 todo를 inp.value에 넣어줌(화면출력)
+            view();
 
             inpbtn.style.display = "none";
             modbtn.style.display = "block";
 
-            view();
+            
         }
 
+        const memoData = [];
 
+        function m_View(){
+
+            let memoView = "";
+
+            memoData.forEach(function(item,i){
+                memoView += `<li>`
+
+                    if(memoData[i].done == true){
+                        memoView += `<div class="active" onclick="">`
+                    }
+            })
+
+        }
+        
     
     </script>
 
