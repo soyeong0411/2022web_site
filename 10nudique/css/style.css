@@ -12,8 +12,12 @@ ul, li {
   list-style: none;
 }
 
-body {
+h1, .menu > ul > li > a {
   font-family: "Roboto", sans-serif;
+}
+
+h3, p {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .container {
@@ -84,11 +88,65 @@ body {
 .page2 {
   position: relative;
 }
-.page2 img {
-  width: 120%;
-  height: 100%;
+.page2 .wrap {
+  background-image: url(../images/mv01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page2 .wrap img {
+  position: absolute;
+  width: 230px;
+  left: 120px;
+  bottom: 50px;
 }
 .page2 .text {
   position: absolute;
-  left: 50px;
+  left: 100px;
+  top: 200px;
+}
+.page2 .text h1 a {
+  font-size: 65px;
+  font-weight: 500;
+  color: #fff;
+}
+.page2 .text p {
+  text-shadow: 0 0 10px #333;
+  position: absolute;
+  z-index: 2;
+  margin-top: 10px;
+}
+.page2 .text p a {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.page2 .text .bg {
+  width: 375px;
+  height: 20px;
+  background: rgba(240, 97, 65, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  left: 20px;
+  bottom: -42px;
+  z-index: 1;
+}
+.page2 .text2 {
+  position: absolute;
+  left: 320px;
+  bottom: 280px;
+}
+.page2 .text2 h3 a {
+  color: #BF523D;
+  font-size: 25px;
+}
+.page2 .text2 p a {
+  color: #fff;
+}
+
+.page3 {
+  background-color: #fbf3ee;
+}
+.page3 .swiper {
+  height: 400px;
 }/*# sourceMappingURL=style.css.map */
