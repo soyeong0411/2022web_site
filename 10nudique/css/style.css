@@ -25,31 +25,33 @@ h3, p {
   margin: 0 auto;
 }
 
-.header {
+#header {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1;
+}
+#header .headerWrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
   z-index: 1;
 }
-.header .menu {
+#header .headerWrap .menu {
   display: flex;
   align-items: center;
   height: 100%;
 }
-.header .menu ul {
+#header .headerWrap .menu ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.header .menu ul li {
+#header .headerWrap .menu ul li {
   height: 100%;
 }
-.header .menu ul li a {
+#header .headerWrap .menu ul li a {
   color: #f06141;
   height: 100%;
   padding: 0 40px;
@@ -58,12 +60,12 @@ h3, p {
   justify-content: center;
   align-items: center;
 }
-.header .icon ul {
+#header .headerWrap .icon ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .icon ul li a {
+#header .headerWrap .icon ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
