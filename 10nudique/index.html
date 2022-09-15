@@ -18,7 +18,7 @@
 </head>
 <body>
     <header id="header">
-        <div class="headerWrap container">
+        <div class="headerWrap">
             <h1><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
             <nav class="menu">
                 <ul>
@@ -43,28 +43,31 @@
 
     <div class="fullpage">
         <div class="section page1">
-            <div class="wrap">
-                <video class="bg_video" src="movie/Your Own Nuance 30s.mp4" autoplay muted loop></video>
+            <div class="wrap"> <!-- data-autoplay -> 스크롤 이동하면 멈추고 돌아오면 재생 -->
+                <video class="bg_video" src="movie/Your Own Nuance 30s.mp4" data-autoplay muted loop></video>
             </div>
         </div>
         <div class="section page2">
             <div class="wrap">
-                <div class="text">
+                <div class="main_title">
                     <h1><a href="#">Nudique Cushion</a></h1>
                     <div class="bg"></div>
                     <p><a href="#">이 순간, 뽐내지 않아도 돋보이는 자신감</a></p>
                 </div>
-                <a href="#"><img src="images/page2_md.png" alt=""></a>
-                <div class="text2">
-                    <h3><a href="">NEW Version.2 출시</a></h3>
-                    <p><a href="#">누디크 순살쿠션</a></p>
-                    <p><a href="#">물광광채, 세미매트</a></p>
+                <a class="page2_md" href="#"><img src="images/page2_md.png" alt="page2_md"></a>
+                <div class="sub_title">
+                    <img src="images/md_bg.png" alt="">
+                    <div class="sub_txt">
+                        <h3><a href="">[NEW Version 출시]</a></h3>
+                        <p><a href="#">물광광채, 세미매트<br>두가지 버전으로 만나보세요!</a></p>
+                    </div>
+                    <div class="bg"></div>
                 </div>
-            </div> 
-        </div>
+            </div>
+        </div> 
         <div class="section page3">
             <div class="wrap">
-                <div class="swiper md_swiper container">
+                <div class="swiper md_swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="images/md01.png" alt="">
