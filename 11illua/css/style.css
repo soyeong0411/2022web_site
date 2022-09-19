@@ -59,6 +59,31 @@ body {
   font-weight: 500;
   font-size: 18px;
 }
+#header .headerWrap .toggle {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  position: relative;
+}
+#header .headerWrap::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  right: 80px;
+}
+#header .headerWrap::before {
+  content: "";
+  display: block;
+  clear: both;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+}
 
 .wrap {
   width: 100%;
@@ -85,4 +110,56 @@ body {
   font-size: 60px;
   font-weight: 500;
   text-shadow: 1px 1px 10px #333;
+}
+.fullpage .page2 {
+  position: relative;
+  padding: 0 170px;
+}
+.fullpage .page2 h1 {
+  position: absolute;
+  top: 170px;
+  font-size: 48px;
+}
+.fullpage .page2 .row {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullpage .page2 .row .content img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 25px;
+}
+.fullpage .page2 .row .content .con_txt {
+  position: relative;
+}
+.fullpage .page2 .row .content .con_txt .top_txt {
+  margin-bottom: 50px;
+}
+.fullpage .page2 .row .content .con_txt .top_txt h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.fullpage .page2 .row .content .con_txt .top_txt p a {
+  font-size: 17px;
+  color: rgb(90, 90, 90);
+}
+.fullpage .page2 .row .content .con_txt::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 1px;
+  background: rgb(201, 201, 201);
+  position: absolute;
+  top: 90px;
+}
+.fullpage .page2 .row .content .con_txt .bottom_txt p {
+  font-size: 18px;
+}
+.fullpage .page2 .row .content .con_txt .bottom_txt span {
+  margin-right: 40px;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

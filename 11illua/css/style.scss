@@ -1,11 +1,13 @@
 $fColor1:#333;
 $fColor2:#fff;
+$fColor3:rgb(90, 90, 90);
+
+$bColor1:rgb(201, 201, 201);
 
 
 *{margin: 0;padding: 0;}
 a:link,a:visited{text-decoration: none;color:$fColor1}
 ul,li{list-style: none;}
-
 
 body{
     font-family: 'IBM Plex Sans KR', sans-serif;
@@ -51,6 +53,24 @@ body{
                 }
             }
         }
+        .toggle{
+            width: 50px;height: 50px;
+            border: 1px solid #000;
+            position: relative;
+        }&::after{
+            content:"";display: block;
+            clear: both;
+            width: 30px;height: 4px;
+            background: $fColor2;
+            position: absolute;right: 80px;
+        }
+        &::before{
+            content:"";display: block;
+            clear: both;
+            width: 30px;height: 4px;
+            background: $fColor2;
+            position: absolute;
+        }
     }
 }
 
@@ -81,4 +101,74 @@ body{
             }
         }
     }
+    .page2{
+        position: relative;
+        padding: 0 170px;
+        h1{
+            position: absolute;
+            top: 170px;font-size: 48px;
+        }
+        .row{
+            width: 100%;height: 100vh;
+            display: flex;justify-content: center;align-items: center;
+            .content{
+                img{
+                    width: 100%;height: 100%;
+                    margin-bottom: 25px;
+                }
+                .con_txt{
+                    position: relative;
+                    .top_txt{
+                        margin-bottom: 50px;
+                        h4{
+                            margin-bottom: 10px;
+                            font-weight: 600;
+                        }
+                        p{
+                            a{
+                                font-size: 17px;
+                                color:$fColor3;
+                            }
+                        }
+                    }&::after{
+                        content:"";display:block;clear: both;
+                        width: 100%;
+                        height: 1px;background: $bColor1;
+                        position: absolute;top: 90px;;
+                    }
+                    .bottom_txt{
+                        p{
+                            font-size: 18px;
+                        }
+                        span{
+                            margin-right: 40px;
+                            font-weight: 600;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 1399px) {
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+   
+}
+
+@media (max-width: 767px) {
+    
+}
+
+@media (max-width: 575px) {
+
 }
