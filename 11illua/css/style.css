@@ -21,6 +21,18 @@ body {
   width: 100%;
   z-index: 1;
 }
+#header.active .mainMenu > ul > li > a {
+  color: #333 !important;
+}
+#header.active h1 .logo {
+  fill: #333 !important;
+}
+#header.active .rightMenu .right_con {
+  border: 1px solid #333 !important;
+}
+#header.active .rightMenu .right_con a {
+  color: #333 !important;
+}
 #header .headerWrap {
   padding: 30px 70px;
   display: flex;
@@ -60,29 +72,30 @@ body {
   font-size: 18px;
 }
 #header .headerWrap .toggle {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #000;
-  position: relative;
+  display: none;
 }
 #header .headerWrap::after {
   content: "";
   display: block;
   clear: both;
   width: 30px;
-  height: 4px;
+  height: 3px;
   background: #fff;
   position: absolute;
   right: 80px;
+  display: none;
 }
 #header .headerWrap::before {
   content: "";
   display: block;
   clear: both;
   width: 30px;
-  height: 4px;
+  height: 3px;
   background: #fff;
   position: absolute;
+  right: 80px;
+  top: 50px;
+  display: none;
 }
 
 .wrap {
@@ -115,11 +128,6 @@ body {
   position: relative;
   padding: 0 170px;
 }
-.fullpage .page2 h1 {
-  position: absolute;
-  top: 170px;
-  font-size: 48px;
-}
 .fullpage .page2 .row {
   width: 100%;
   height: 100vh;
@@ -127,10 +135,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+.fullpage .page2 .row h1 {
+  position: absolute;
+  font-size: 48px;
+}
 .fullpage .page2 .row .content img {
   width: 100%;
   height: 100%;
-  margin-bottom: 25px;
+  margin-top: 100px;
 }
 .fullpage .page2 .row .content .con_txt {
   position: relative;
@@ -139,7 +151,7 @@ body {
   margin-bottom: 50px;
 }
 .fullpage .page2 .row .content .con_txt .top_txt h4 {
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
   font-weight: 600;
 }
 .fullpage .page2 .row .content .con_txt .top_txt p a {
@@ -162,4 +174,63 @@ body {
 .fullpage .page2 .row .content .con_txt .bottom_txt span {
   margin-right: 40px;
   font-weight: 600;
+}
+.fullpage .page3 .swiper {
+  width: 100%;
+  height: 100vh;
+}
+.fullpage .page3 .swiper .swiper-wrapper img {
+  width: 100%;
+  height: 100vh;
+}
+.fullpage .page3 .right {
+  position: relative;
+}
+.fullpage .page3 .right .page3_txt {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+.fullpage .page3 .right .page3_txt h1 {
+  font-size: 48px;
+}
+.fullpage .page3 .right .page3_txt p {
+  font-size: 20px;
+}
+.fullpage .page3 .right .page3_txt ul {
+  display: flex;
+  margin-top: 50px;
+}
+.fullpage .page3 .right .page3_txt ul li {
+  position: relative;
+}
+.fullpage .page3 .right .page3_txt ul li::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgb(138, 138, 138);
+  position: absolute;
+  top: 9px;
+  left: -20px;
+}
+.fullpage .page3 .right .page3_txt ul li:first-child::after {
+  display: none;
+}
+.fullpage .page3 .right .page3_txt ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 30px;
+  font-size: 17px;
+  color: rgb(138, 138, 138);
+}
+.fullpage .page4 .swiper {
+  width: 1540px;
 }/*# sourceMappingURL=style.css.map */

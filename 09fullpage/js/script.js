@@ -4,6 +4,9 @@ $("#fullpage").fullpage({
     navigation:true,
     navigationPosition:"fp-right",
     navigationTooltips:["first","second","third","forth"],
-    responsiveWidth:900
+    responsiveWidth:900,
+    afterLoad:function(anchorslink,index){
+        console.log(anchorslink,index);
+    }
 
 })

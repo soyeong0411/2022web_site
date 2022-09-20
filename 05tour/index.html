@@ -499,7 +499,56 @@
                       </script>
                 </li>
                 <li>
-                    <div class="searchbarWrap02">
+                    <div class="weatherWrap">
+                        <select name="inpCity" class="inpCity">
+                            <option value="seoul">서울</option>
+                            <option value="jeju">제주</option>
+                            <option value="daegu">대구</option>
+                        </select>
+                        <div class="weather">
+                            <h1 class="city">city</h1>
+                            <div class="tempWrap">
+                                <div class="img">image</div>
+                                <p class="w_temp"></p>
+                                <p class="temp">temp</p>
+                            </div>
+                        </div>
+                        <img src="images/map3.png" alt="">
+                    </div>
+
+                    <script>
+
+                        $(".inpCity").change(function(){
+                            $(".inpCity option:selected").each(function(){
+                                weather($(this).val())
+                            })
+                        })
+
+                        const myKey = "fa0e00ea4d7237ae20c895ec4f58d24e"    
+                        
+                        weather("seoul")
+                        function weather(wth){
+                            $.ajax({
+                                url:"https://api.openweathermap.org/data/2.5/weather?q="+ wth +"&appid="+ myKey +"&units=metric&lang=en",
+                                dataType:"json",
+                                success:wthData
+                            })
+                        }
+                        function wthData(data){
+                                let city = data.name;
+                                let img = data.weather[0].icon;
+                                let iUrl = `<img src = https://openweathermap.org/img/wn/${img}@2x.png>`;
+                                let temp = parseInt(data.main.temp)+"&#x2103";
+                                let w_temp = data.weather[0].main;
+
+                                $(".city").html(city)
+                                $(".img").html(iUrl)
+                                $(".temp").html(temp)
+                                $(".w_temp").html(w_temp)
+                            }
+                           
+                    </script>
+                    <!-- <div class="searchbarWrap02">
                         <p>나의 여행지 날씨 검색</p>
                         <form action="#">
                             <input type="text" name="search" placeholder="여행지 검색" class="inp">
@@ -510,8 +559,8 @@
                         <div class="icon02">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                    </div>
-                    <img src="images/map3.png" alt="">
+                    </div> -->
+                    
                 </li>
                 <li class="sec02_Item_l">
                     <div class="sec02_square_moon">

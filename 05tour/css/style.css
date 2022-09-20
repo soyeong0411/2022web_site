@@ -425,6 +425,30 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     z-index: 2;
 }
 
+.weatherWrap{
+    width: 100%;height: 100%;
+    position: relative;
+}
+.weather{
+    display: flex;
+    position: absolute;bottom: 0;
+    width: 100%;
+}
+.weather .city{
+    position: absolute;
+    bottom: 15px;right: 30px;
+}
+.weather .tempWrap{
+    text-align: center;
+}
+
+.inpCity{
+    position: absolute;width: 80px;
+    bottom: 55px;right: 15px;
+    z-index: 1;
+}
+
+
 
 .searchbarWrap02{
     position: absolute;left: calc(50% - 105px);
