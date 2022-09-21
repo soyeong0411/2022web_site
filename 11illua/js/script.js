@@ -7,20 +7,33 @@ $(".fullpage").fullpage({
     afterLoad:function(anchorslink,index){
         console.log(anchorslink,index);
 
-        if(index == 2){
+        if(index == 2|| index==4){
             $("#header").addClass("active")
         }else{
             $("#header").removeClass("active")
         }
 
-       
+        // if(index == 4){
+        //   $("#header").addClass("active")
+        // }else{
+        //   $("#header").removeClass("active")
+        // }
+
     }
 })
 
 var swiper = new Swiper(".page3_swiper", {
+    loop:true,
+    autoplay: {
+      delay: 3000,
+    }, 
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     pagination: {
       el: ".swiper-pagination",
-      type: "fraction",
+      type: "bullets",
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -28,10 +41,19 @@ var swiper = new Swiper(".page3_swiper", {
     },
   });
 
+
   var swiper = new Swiper(".page4_swiper", {
+    loop:true,
+    autoplay: {
+      delay: 3000,
+    }, 
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     pagination: {
       el: ".swiper-pagination",
-      type: "fraction",
+      type: "bullets",
     },
     navigation: {
       nextEl: ".swiper-button-next",

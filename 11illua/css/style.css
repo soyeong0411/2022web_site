@@ -41,6 +41,7 @@ body {
 }
 #header .headerWrap h1 .logo {
   fill: #fff;
+  transition: 0.3s;
 }
 #header .headerWrap .mainMenu ul {
   display: flex;
@@ -56,6 +57,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  transition: 0.3s;
 }
 #header .headerWrap .rightMenu .right_con {
   width: 200px;
@@ -106,6 +108,9 @@ body {
   align-items: center;
 }
 
+.fullpage .page1 {
+  overflow: hidden;
+}
 .fullpage .page1 .wrap {
   position: relative;
 }
@@ -175,13 +180,29 @@ body {
   margin-right: 40px;
   font-weight: 600;
 }
+.fullpage .page3 {
+  overflow: hidden;
+}
 .fullpage .page3 .swiper {
   width: 100%;
   height: 100vh;
 }
+.fullpage .page3 .swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
 .fullpage .page3 .swiper .swiper-wrapper img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+}
+.fullpage .page3 .swiper .swiper-pagination-bullets span {
+  width: 150px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.fullpage .page3 .swiper .swiper-button-next,
+.fullpage .page3 .swiper .swiper-button-prev {
+  display: none;
 }
 .fullpage .page3 .right {
   position: relative;
@@ -231,6 +252,97 @@ body {
   font-size: 17px;
   color: rgb(138, 138, 138);
 }
+.fullpage .page4 .page4_txt {
+  display: flex;
+}
+.fullpage .page4 .page4_txt h1 {
+  font-size: 48px;
+}
+.fullpage .page4 .page4_txt ul {
+  display: flex;
+  align-items: center;
+}
+.fullpage .page4 .page4_txt ul li {
+  position: relative;
+}
+.fullpage .page4 .page4_txt ul li::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgb(138, 138, 138);
+  position: absolute;
+  top: 9px;
+  left: -17px;
+}
+.fullpage .page4 .page4_txt ul li:first-child::after {
+  display: none;
+}
+.fullpage .page4 .page4_txt ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 30px;
+  font-size: 17px;
+  color: rgb(138, 138, 138);
+}
 .fullpage .page4 .swiper {
   width: 1540px;
+}
+.fullpage .page4 .swiper .swiper-pagination-bullets span {
+  width: 150px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.fullpage .page4 .swiper .swiper-button-next,
+.fullpage .page4 .swiper .swiper-button-prev {
+  display: none;
+}
+.fullpage .footer {
+  height: 500px !important;
+  position: relative;
+}
+.fullpage .footer .footWrap {
+  width: 100%;
+  padding: 0 170px;
+  position: absolute;
+}
+.fullpage .footer .footWrap .foot_top {
+  display: flex;
+  align-items: center;
+}
+.fullpage .footer .footWrap .foot_top h1 {
+  width: 160px;
+  height: 200px;
+}
+.fullpage .footer .footWrap .foot_top h1 svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+.fullpage .footer .footWrap .foot_top .foot_icon {
+  margin-left: auto;
+}
+.fullpage .footer .footWrap .foot_top .foot_icon ul {
+  display: flex;
+  gap: 20px;
+}
+.fullpage .footer .footWrap .foot_top .foot_icon ul img {
+  width: 40px;
+  height: 40px;
+}
+.fullpage .footer .footWrap .foot_mid ul {
+  display: flex;
+  justify-content: right;
+  gap: 60px;
+}
+.fullpage .footer .footWrap .foot_mid ul li a {
+  display: flex;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
 }/*# sourceMappingURL=style.css.map */

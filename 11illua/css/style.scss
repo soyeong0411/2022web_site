@@ -45,7 +45,8 @@ body{
         align-items: center;
         h1{
             .logo{
-                fill:$fColor2
+                fill:$fColor2;
+                transition: 0.3s;
             }
         }
         .mainMenu{
@@ -57,7 +58,8 @@ body{
                         padding: 0 40px;width: 100%;height: 100%;
                         display: flex;justify-content: center;
                         align-items: center;
-                        color:$fColor2
+                        color:$fColor2;
+                        transition: 0.3s;
                     }
                 }
             }
@@ -104,7 +106,9 @@ body{
 }
 
 .fullpage{
+    
     .page1{
+        overflow: hidden;
         .wrap{
             position: relative;
             .bg_movie{
@@ -177,12 +181,25 @@ body{
         
     }
     .page3{
+        overflow: hidden;
         .swiper{
             width: 100%;height: 100vh;
-            .swiper-wrapper{
+            .swiper-wrapper{              // wrapper에 크기 지정 반드시!!
+                width: 100%;height: 100%;
                 img{
-                    width: 100%;height: 100vh;
+                    width: 100%;height: 100%;
                 }
+            }
+            
+            .swiper-pagination-bullets{
+                span{
+                    width: 150px;border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.7);
+                }
+            }
+            .swiper-button-next,
+            .swiper-button-prev{
+                display: none;
             }
         }
         .right{
@@ -228,10 +245,101 @@ body{
         }
     }
     .page4{
+        .page4_txt{
+            display: flex;
+            h1{
+                font-size: 48px;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    position: relative;
+                    &::after{
+                        content: "";display: block;clear: both;
+                        width: 5px;height: 5px;
+                        border-radius: 50%;
+                        background: $fColor4;
+                        position: absolute;top: 9px;left: -17px;
+                    }
+                    &:first-child::after{
+                        display: none;
+                    }
+                    a{
+                        display: flex;justify-content: center;
+                        align-items: center;
+                        width: 100%;height: 100%;
+                        padding-right: 30px;
+                        font-size: 17px;
+                        color:$fColor4
+                    }
+                }
+            }
+            
+        }
         .swiper{
             width: 1540px;
+            .swiper-pagination-bullets{
+                span{
+                    width: 150px;border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.7);
+                }
+            }
+            .swiper-button-next,
+            .swiper-button-prev{
+                display: none;
+            }
         }
     }
+    .footer{
+        height: 500px !important;
+        position: relative;
+        .footWrap{
+            width: 100%;       // width값이 없으면 ml:auto가 안됨
+            padding: 0 170px;
+            position: absolute;
+            .foot_top{
+                display: flex;
+                align-items: center;
+                h1{
+                    width: 160px;height: 200px;
+                    svg{
+                        width: 100%;height: 100%;
+                        fill:$fColor2
+                    }
+                }
+                .foot_icon{
+                    margin-left: auto;
+                    ul{
+                        display: flex;
+                        gap: 20px;
+                        li{
+    
+                        }
+                        img{
+                            width: 40px;height: 40px;
+                        }
+                    }
+                }
+            }
+            .foot_mid{
+                ul{
+                    display: flex;justify-content: right;
+                    gap: 60px;
+                    li{
+                        a{
+                            display: flex;
+                            color:$fColor2;
+                            font-weight: 500;
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+}
 }
 
 @media (max-width: 1399px) {
