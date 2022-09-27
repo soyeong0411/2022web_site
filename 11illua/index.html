@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" integrity="sha512-siwe/oXMhSjGCwLn+scraPOWrJxHlUgMBMZXdPe2Tnk3I0x3ESCoLz7WZ5NTH6SZrywMY+PB1cjyqJ5jAluCOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="js/jquery.fullPage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
@@ -59,8 +61,58 @@
             <div class="wrap">
                 <video class="bg_movie" src="movie/hotel illua.mp4" data-autoplay muted loop></video>
                 <div class="mainTitle">
-                    <p><a href="#">조용하고 프라이빗한 호텔</a></p>
+                    <h1><a href="#">HOTEL ILLUA</a></h1>
+                    <p><a href="#">편안한 휴양을 원하는 사람들을 위해 해운대 달맞이길 언덕에 자리잡은 호텔 일루아.<br>
+                        호텔 일루아는 당신께 드리는 바다의 선물입니다.</a></p>
                 </div>
+                <div class="field">
+                    <div class="date">
+                        <div class="start">
+                            <label for="sdate1">CHECK IN</label>
+                            <input type="text" id="sdate1" class="inp-field" value="날짜선택">
+                        </div>
+                        <div class="end">
+                            <label for="edate1">CHECK OUT</label>
+                            <input type="text" id="edate1" class="inp-field" value="날짜선택">
+                        </div>
+                    </div>
+                    <div class="field_number">
+                        <div class="room">
+                            <label for="room">ROOM</label>
+                            <select name="room_num" id="room">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="adult">
+                            <label for="adult">ADULT</label>
+                            <select name="adult_num" id="adult">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="children">
+                            <label for="children">CHILDREN</label>
+                            <select name="child_num" id="children">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_btn">
+                        <a href="#">SEARCH</a>
+                    </div>
+                </div>
+               
             </div>
         </div>
         <div class="section page2 container-fluid">
