@@ -98,36 +98,135 @@ body {
 }
 #header .headerWrap .rightMenu .right_con:hover {
   background: #fff;
-  border: 1px solid #000;
 }
 #header .headerWrap .rightMenu .right_con:hover > a {
   color: #333;
 }
-#header .headerWrap .toggle {
+#header .headerWrap .m_toggle {
   display: none;
 }
-#header .headerWrap::after {
+#header .headerWrap .m_toggle .toggle {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .headerWrap .m_toggle .toggle::after {
   content: "";
   display: block;
-  clear: both;
-  width: 30px;
+  width: 35px;
   height: 3px;
   background: #fff;
   position: absolute;
-  right: 80px;
-  display: none;
+  top: 17px;
 }
-#header .headerWrap::before {
+#header .headerWrap .m_toggle .toggle::before {
   content: "";
   display: block;
-  clear: both;
-  width: 30px;
+  width: 35px;
   height: 3px;
   background: #fff;
   position: absolute;
-  right: 80px;
-  top: 50px;
+  bottom: 17px;
+}
+#header .headerWrap .m_menubg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: none;
+}
+#header .headerWrap .m_menuClone {
+  position: fixed;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  background: rgb(189, 151, 130);
+  transition: 0.4s;
+}
+#header .headerWrap .m_menuClone .m_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+#header .headerWrap .m_menuClone .m_menu .out {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#header .headerWrap .m_menuClone .m_menu .out .outbar1 {
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 15px;
+  position: absolute;
+  transform: translateY(10px);
+  transform: rotate(45deg);
+}
+#header .headerWrap .m_menuClone .m_menu .out .outbar2 {
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 15px;
+  position: absolute;
+  transform: translateY(-10px);
+  transform: rotate(-45deg);
+}
+#header .headerWrap .m_menubar {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+#header .headerWrap .m_menulist {
+  margin-top: 20px;
+}
+#header .headerWrap .m_menulist ul li {
+  position: relative;
+}
+#header .headerWrap .m_menulist ul li:hover::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 13px solid rgb(132, 97, 75);
+  border-right: 13px solid transparent;
+  position: absolute;
+  left: 150px;
+  top: 25%;
+}
+#header .headerWrap .m_menulist ul li:hover::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 13px solid transparent;
+  border-right: 13px solid rgb(132, 97, 75);
+  position: absolute;
+  right: 150px;
+  top: 25%;
+}
+#header .headerWrap .m_menulist ul li a {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .wrap {
@@ -150,33 +249,36 @@ body {
   width: 100%;
   height: 100%;
 }
-.fullpage .page1 .wrap .mainTitle {
+.fullpage .page1 .wrap .page1_contents .mainTitle {
+  width: 100%;
   position: absolute;
   transform: translate(-50%, -90%);
   top: 50%;
   left: 50%;
   text-align: center;
 }
-.fullpage .page1 .wrap .mainTitle h1 {
+.fullpage .page1 .wrap .page1_contents .mainTitle h1 {
   margin-bottom: 20px;
 }
-.fullpage .page1 .wrap .mainTitle h1 a {
+.fullpage .page1 .wrap .page1_contents .mainTitle h1 a {
   color: #fff;
-  font-size: 70px;
+  font-size: 5vw;
   font-weight: 500;
   text-shadow: 1px 1px 10px #333;
 }
-.fullpage .page1 .wrap .mainTitle p {
+.fullpage .page1 .wrap .page1_contents .mainTitle p {
   margin-bottom: 25px;
 }
-.fullpage .page1 .wrap .mainTitle p a {
+.fullpage .page1 .wrap .page1_contents .mainTitle p a {
   color: #fff;
   font-size: 20px;
   text-shadow: 1px 1px 10px #333;
 }
-.fullpage .page1 .wrap .field {
+.fullpage .page1 .wrap .page1_contents .field {
   position: absolute;
-  bottom: 400px;
+  transform: translate(-50%, 40%);
+  top: 50%;
+  left: 50%;
   width: 900px;
   display: flex;
   justify-content: space-between;
@@ -185,18 +287,18 @@ body {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 30px;
 }
-.fullpage .page1 .wrap .field .date {
+.fullpage .page1 .wrap .page1_contents .field .date {
   display: flex;
   gap: 70px;
 }
-.fullpage .page1 .wrap .field .date .start {
+.fullpage .page1 .wrap .page1_contents .field .date .start {
   display: flex;
   flex-direction: column;
   color: #fff;
   position: relative;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .date .start::after {
+.fullpage .page1 .wrap .page1_contents .field .date .start::after {
   content: "";
   display: block;
   width: 1px;
@@ -205,7 +307,7 @@ body {
   position: absolute;
   right: -35px;
 }
-.fullpage .page1 .wrap .field .date .start .inp-field {
+.fullpage .page1 .wrap .page1_contents .field .date .start .inp-field {
   background: transparent;
   border: 0 none;
   color: #fff;
@@ -213,17 +315,17 @@ body {
   margin-top: 10px;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .date .start .inp-field:focus {
+.fullpage .page1 .wrap .page1_contents .field .date .start .inp-field:focus {
   outline: none;
 }
-.fullpage .page1 .wrap .field .date .end {
+.fullpage .page1 .wrap .page1_contents .field .date .end {
   display: flex;
   flex-direction: column;
   color: #fff;
   position: relative;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .date .end::after {
+.fullpage .page1 .wrap .page1_contents .field .date .end::after {
   content: "";
   display: block;
   width: 1px;
@@ -232,7 +334,7 @@ body {
   position: absolute;
   right: -35px;
 }
-.fullpage .page1 .wrap .field .date .end .inp-field {
+.fullpage .page1 .wrap .page1_contents .field .date .end .inp-field {
   background: transparent;
   border: 0 none;
   color: #fff;
@@ -240,72 +342,72 @@ body {
   margin-top: 10px;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .date .end .inp-field:focus {
+.fullpage .page1 .wrap .page1_contents .field .date .end .inp-field:focus {
   outline: none;
 }
-.fullpage .page1 .wrap .field .field_number {
+.fullpage .page1 .wrap .page1_contents .field .field_number {
   display: flex;
   gap: 15px;
   position: relative;
 }
-.fullpage .page1 .wrap .field .field_number .room {
+.fullpage .page1 .wrap .page1_contents .field .field_number .room {
   display: flex;
   flex-direction: column;
   color: #fff;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .field_number .room select {
+.fullpage .page1 .wrap .page1_contents .field .field_number .room select {
   margin-top: 10px;
   background: transparent;
   border: 0 none;
   color: #fff;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .field_number .room select option {
+.fullpage .page1 .wrap .page1_contents .field .field_number .room select option {
   color: #333;
 }
-.fullpage .page1 .wrap .field .field_number .room select:focus {
+.fullpage .page1 .wrap .page1_contents .field .field_number .room select:focus {
   outline: none;
 }
-.fullpage .page1 .wrap .field .field_number .adult {
+.fullpage .page1 .wrap .page1_contents .field .field_number .adult {
   display: flex;
   flex-direction: column;
   color: #fff;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .field_number .adult select {
+.fullpage .page1 .wrap .page1_contents .field .field_number .adult select {
   margin-top: 10px;
   background: transparent;
   border: 0 none;
   color: #fff;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .field_number .adult select option {
+.fullpage .page1 .wrap .page1_contents .field .field_number .adult select option {
   color: #333;
 }
-.fullpage .page1 .wrap .field .field_number .adult select:focus {
+.fullpage .page1 .wrap .page1_contents .field .field_number .adult select:focus {
   outline: none;
 }
-.fullpage .page1 .wrap .field .field_number .children {
+.fullpage .page1 .wrap .page1_contents .field .field_number .children {
   display: flex;
   flex-direction: column;
   color: #fff;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .field_number .children select {
+.fullpage .page1 .wrap .page1_contents .field .field_number .children select {
   margin-top: 10px;
   background: transparent;
   border: 0 none;
   color: #fff;
   text-align: center;
 }
-.fullpage .page1 .wrap .field .field_number .children select option {
+.fullpage .page1 .wrap .page1_contents .field .field_number .children select option {
   color: #333;
 }
-.fullpage .page1 .wrap .field .field_number .children select:focus {
+.fullpage .page1 .wrap .page1_contents .field .field_number .children select:focus {
   outline: none;
 }
-.fullpage .page1 .wrap .field .field_number::after {
+.fullpage .page1 .wrap .page1_contents .field .field_number::after {
   content: "";
   display: block;
   width: 1px;
@@ -314,7 +416,7 @@ body {
   position: absolute;
   right: -35px;
 }
-.fullpage .page1 .wrap .field .main_btn {
+.fullpage .page1 .wrap .page1_contents .field .main_btn {
   width: 200px;
   height: 52px;
   border: 1px solid #fff;
@@ -325,16 +427,39 @@ body {
   transition: 0.3s;
   cursor: pointer;
 }
-.fullpage .page1 .wrap .field .main_btn a {
+.fullpage .page1 .wrap .page1_contents .field .main_btn a {
   color: #fff;
   font-weight: 500;
   font-size: 18px;
 }
-.fullpage .page1 .wrap .field .main_btn:hover {
+.fullpage .page1 .wrap .page1_contents .field .main_btn:hover {
   background: #fff;
-  border: 1px solid #000;
 }
-.fullpage .page1 .wrap .field .main_btn:hover > a {
+.fullpage .page1 .wrap .page1_contents .field .main_btn:hover > a {
+  color: #333;
+}
+.fullpage .page1 .wrap .page1_contents .field .m_btn {
+  display: none;
+}
+.fullpage .page1 .wrap .page1_contents .field .m_btn .sub_btn {
+  width: 200px;
+  height: 52px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.fullpage .page1 .wrap .page1_contents .field .m_btn .sub_btn a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+}
+.fullpage .page1 .wrap .page1_contents .field .m_btn .sub_btn:hover {
+  background: #fff;
+}
+.fullpage .page1 .wrap .page1_contents .field .m_btn .sub_btn:hover > a {
   color: #333;
 }
 .fullpage .page2 {
@@ -617,4 +742,97 @@ body {
   height: 100%;
   background: #000;
   opacity: 0.4;
+}
+
+@media (max-width: 1199px) {
+  .fullpage .page1 .mainTitle h1 a {
+    font-size: 6vw !important;
+  }
+  .fullpage .page1 .mainTitle p a {
+    font-size: 17px !important;
+  }
+  .fullpage .page2 .row {
+    width: 100%;
+  }
+  .fullpage .page2 .row h1 {
+    font-size: 40px;
+  }
+  .fullpage .page2 .row .content .con_txt .top_txt {
+    margin-bottom: 20px;
+  }
+  .fullpage .page2 .row .content .con_txt .top_txt h4 {
+    font-size: 20px;
+  }
+  .fullpage .page2 .row .content .con_txt .top_txt p a {
+    font-size: 14px;
+  }
+  .fullpage .page2 .row .content .con_txt .bottom_txt p {
+    font-size: 14px;
+  }
+  .fullpage .page2 .row .content .con_txt .bottom_txt span {
+    margin-right: 40px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 991px) {
+  .headerWrap {
+    padding: 30px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .headerWrap.fixed {
+    padding: 10px 50px;
+    background: rgba(146, 117, 101, 0.8);
+  }
+  .headerWrap .mainMenu {
+    display: none !important;
+  }
+  .headerWrap .rightMenu {
+    display: none;
+  }
+  .headerWrap .m_toggle {
+    display: block !important;
+    cursor: pointer;
+  }
+  .fullpage .page1 .mainTitle {
+    width: 100%;
+  }
+  .fullpage .page1 .mainTitle h1 a {
+    font-size: 60px !important;
+  }
+  .fullpage .page1 .field {
+    width: 40% !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    background: transparent !important;
+  }
+  .fullpage .page1 .field .date {
+    display: none !important;
+  }
+  .fullpage .page1 .field .field_number {
+    display: none !important;
+  }
+  .fullpage .page1 .field .main_btn {
+    display: none !important;
+  }
+  .fullpage .page1 .field .m_btn {
+    display: block !important;
+    margin-top: -25px;
+  }
+}
+@media (max-width: 767px) {
+  .fullpage .page1 .mainTitle {
+    width: 100%;
+  }
+  .fullpage .page1 .mainTitle h1 a {
+    font-size: 55px !important;
+  }
+  .fullpage .page1 .mainTitle p {
+    padding: 0 15px;
+  }
+  .fullpage .page1 .field {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=style.css.map */

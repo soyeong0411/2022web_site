@@ -1,3 +1,4 @@
+//fullpage scroll
 $(".fullpage").fullpage({
     menu:".mainMenu",
     anchors:["m1st","m2st","m3st","m4st","m5st"],
@@ -9,19 +10,14 @@ $(".fullpage").fullpage({
 
         if(index == 2|| index==4){
             $("#header").addClass("active")
+
         }else{
             $("#header").removeClass("active")
         }
-
-        // if(index == 4){
-        //   $("#header").addClass("active")
-        // }else{
-        //   $("#header").removeClass("active")
-        // }
-
     }
 })
 
+//swiper
 var swiper = new Swiper(".page3_swiper", {
     loop:true,
     autoplay: {
@@ -61,6 +57,7 @@ var swiper = new Swiper(".page3_swiper", {
     },
   });
 
+  //form
   $("#sdate1,#edate1").datepicker({
     dateFormat: 'yy/mm/dd',
     prevText: '이전 달',
@@ -75,3 +72,59 @@ var swiper = new Swiper(".page3_swiper", {
     changeYear: true,
     yearSuffix: '년'
 });
+
+//toggle
+$(".toggle").click(function(){
+  $(".m_menuClone").css("right",0)
+  $(".m_menubg").show()
+})
+$(".m_menubg").click(function(){
+  $(".m_menuClone").css("right","-100%")
+  $(".m_menubg").hide()
+})
+$(".out").click(function(){
+  $(".m_menuClone").css("right","-100%");
+  $(".m_menubg").hide();
+})
+
+//menuclone
+$(".mainMenu>ul").clone().appendTo(".m_menulist");
+
+//mobile_scroll
+$(window).scroll(function(){
+  let scrollY = window.pageYOffset;
+
+  if(scrollY > 400){
+      $(".headerWrap").addClass("fixed");
+  }else{
+      $(".headerWrap").removeClass("fixed");
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let view = true;
+// $(".out").click(function(){
+//   if(view == true){
+//     $(".outbar1,.outbar2,.outbar3").addClass("active");
+//     view = false;
+//   }else{
+//     $(".outbar1,.outbar2,.outbar3").removeClass("active");
+//     $(".m_menuClone").css("right","-100%");
+//     $(".m_menubg").hide()
+//     view = true;
+//   }
+// })
+
+
