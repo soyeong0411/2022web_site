@@ -4,7 +4,7 @@ $(".fullpage").fullpage({
     anchors:["m1st","m2st","m3st","m4st","m5st"],
     navigation:true,
     navigationPosition:"fp-right",
-    responsiveWidth:900,
+    responsiveWidth:1000,
     afterLoad:function(anchorslink,index){
         console.log(anchorslink,index);
 
@@ -18,6 +18,25 @@ $(".fullpage").fullpage({
 })
 
 //swiper
+var swiper = new Swiper(".m_page2_swiper", {
+  loop:true,
+  autoplay: {
+    delay: 3000,
+  }, 
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 var swiper = new Swiper(".page3_swiper", {
     loop:true,
     autoplay: {
