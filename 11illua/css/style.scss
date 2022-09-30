@@ -825,6 +825,32 @@ body{
                     img{
                         width: 100vw;
                     }
+                    .m_contxt{
+                        text-align: center;
+                        p{
+                            a{
+                                span{
+                                    font-weight: 500;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                        .btn{
+                            width: 130px;height: 40px;
+                            border: 1px solid #000;
+                            &:hover{
+                                background: #000;
+                            }
+                            &:hover >a{
+                                color:#fff
+                            }
+                            a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
                 }
             }
         }

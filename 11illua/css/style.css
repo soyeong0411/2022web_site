@@ -839,6 +839,29 @@ body {
   .fullpage .page2 .m_page2_slide .swiper-wrapper img {
     width: 100vw;
   }
+  .fullpage .page2 .m_page2_slide .swiper-wrapper .m_contxt {
+    text-align: center;
+  }
+  .fullpage .page2 .m_page2_slide .swiper-wrapper .m_contxt p a span {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .fullpage .page2 .m_page2_slide .swiper-wrapper .m_contxt .btn {
+    width: 130px;
+    height: 40px;
+    border: 1px solid #000;
+  }
+  .fullpage .page2 .m_page2_slide .swiper-wrapper .m_contxt .btn:hover {
+    background: #000;
+  }
+  .fullpage .page2 .m_page2_slide .swiper-wrapper .m_contxt .btn:hover > a {
+    color: #fff;
+  }
+  .fullpage .page2 .m_page2_slide .swiper-wrapper .m_contxt .btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media (max-width: 767px) {
   .fullpage .page1 .mainTitle {
