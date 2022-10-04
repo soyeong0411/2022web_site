@@ -29,7 +29,7 @@ var swiper = new Swiper(".m_page2_swiper", {
   },
   pagination: {
     el: ".swiper-pagination",
-    type: "bullets",
+    type: "fraction",
   },
   navigation: {
     nextEl: ".swiper-button-next",
