@@ -8,12 +8,27 @@ $(".fullpage").fullpage({
     afterLoad:function(anchorslink,index){
         console.log(anchorslink,index);
 
-        if(index == 2|| index==4){
-            $("#header").addClass("active")
+        if(index == 2){
+            $(".page2_txt>h1,.page2_txt>p").addClass("move")
+        }else{
+            $(".page2_txt>h1,.page2_txt>p").removeClass("move")
+        }
 
+        if(index == 3){
+            $("#header").addClass("active")
         }else{
             $("#header").removeClass("active")
         }
+
+        if(index == 4){
+            $("#header").addClass("active")
+        }else{
+            $("#header").removeClass("active")
+        }
+
+        
+        
+
     }
 })
 
@@ -48,7 +63,7 @@ var swiper = new Swiper(".page3_swiper", {
     },
     pagination: {
       el: ".swiper-pagination",
-      type: "bullets",
+
     },
     navigation: {
       nextEl: ".swiper-button-next",

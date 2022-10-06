@@ -248,6 +248,23 @@ body {
      object-fit: cover;
   width: 100%;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.fullpage .page1 .wrap::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+}
+.fullpage .page1 .wrap .page1_contents {
+  z-index: 1;
 }
 .fullpage .page1 .wrap .page1_contents .mainTitle {
   width: 100%;
@@ -267,12 +284,32 @@ body {
   text-shadow: 1px 1px 10px #333;
 }
 .fullpage .page1 .wrap .page1_contents .mainTitle p {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 .fullpage .page1 .wrap .page1_contents .mainTitle p a {
   color: #fff;
   font-size: 20px;
   text-shadow: 1px 1px 10px #333;
+}
+.fullpage .page1 .wrap .page1_contents .mainTitle .quick {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.fullpage .page1 .wrap .page1_contents .mainTitle img {
+  width: 20px;
+  -webkit-animation: page1_arrow 0.8s infinite forwards;
+          animation: page1_arrow 0.8s infinite forwards;
+}
+@-webkit-keyframes page1_arrow {
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes page1_arrow {
+  100% {
+    transform: translateY(10px);
+  }
 }
 .fullpage .page1 .wrap .page1_contents .field {
   position: absolute;
@@ -284,8 +321,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
 }
 .fullpage .page1 .wrap .page1_contents .field .date {
   display: flex;
@@ -463,58 +498,78 @@ body {
   color: #333;
 }
 .fullpage .page2 {
-  position: relative;
-  padding: 0 170px;
-}
-.fullpage .page2 .row {
-  width: 100%;
-  height: 100vh;
+  background-image: url(../images/illua-visual_ad.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.fullpage .page2 .row h1 {
-  position: absolute;
-  font-size: 48px;
-}
-.fullpage .page2 .row .content img {
-  width: 100%;
-  height: 100%;
-  margin-top: 100px;
-}
-.fullpage .page2 .row .content .con_txt {
   position: relative;
 }
-.fullpage .page2 .row .content .con_txt .top_txt {
-  margin-bottom: 50px;
+.fullpage .page2 .page2_txt {
+  text-align: center;
 }
-.fullpage .page2 .row .content .con_txt .top_txt h4 {
-  margin: 20px 0 10px 0;
-  font-weight: 600;
+.fullpage .page2 .page2_txt h1 {
+  color: #fff;
+  font-size: 56px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transition: 0.3s;
 }
-.fullpage .page2 .row .content .con_txt .top_txt p a {
-  font-size: 17px;
-  color: rgb(90, 90, 90);
+.fullpage .page2 .page2_txt h1.move {
+  -webkit-animation: page2_txt 0.5s linear forwards;
+          animation: page2_txt 0.5s linear forwards;
 }
-.fullpage .page2 .row .content .con_txt::after {
-  content: "";
-  display: block;
-  clear: both;
-  width: 100%;
-  height: 1px;
-  background: rgb(201, 201, 201);
-  position: absolute;
-  top: 90px;
+.fullpage .page2 .page2_txt p {
+  color: #fff;
+  font-size: 20px;
+  opacity: 0;
+  transition: 0.3s;
 }
-.fullpage .page2 .row .content .con_txt .bottom_txt p {
-  font-size: 18px;
+.fullpage .page2 .page2_txt p.move {
+  -webkit-animation: page2_txt 0.5s linear forwards;
+          animation: page2_txt 0.5s linear forwards;
 }
-.fullpage .page2 .row .content .con_txt .bottom_txt span {
-  margin-right: 40px;
-  font-weight: 600;
+.fullpage .page2 .page2_txt p:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
-.fullpage .page2 .m_page2_slide {
-  display: none;
+.fullpage .page2 .page2_txt p:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.fullpage .page2 .page2_txt p:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.fullpage .page2 .page2_txt p:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.fullpage .page2 .page2_txt p:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.fullpage .page2 .page2_txt p:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.fullpage .page2 .page2_txt p:nth-child(8) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+@-webkit-keyframes page2_txt {
+  100% {
+    opacity: 1;
+    transform: translateY(-35px);
+  }
+}
+@keyframes page2_txt {
+  100% {
+    opacity: 1;
+    transform: translateY(-35px);
+  }
 }
 .fullpage .page3 {
   overflow: hidden;
@@ -820,7 +875,7 @@ body {
   }
   .fullpage .page1 .field .m_btn {
     display: block !important;
-    margin-top: -25px;
+    margin-top: -10px;
   }
   .fullpage .page2 {
     padding: 0;
