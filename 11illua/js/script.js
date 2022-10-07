@@ -52,6 +52,7 @@ var swiper = new Swiper(".m_page2_swiper", {
   },
 });
 
+var menu = ["standard","delux","spa","royal"]
 var swiper = new Swiper(".page3_swiper", {
     loop:true,
     autoplay: {
@@ -63,7 +64,10 @@ var swiper = new Swiper(".page3_swiper", {
     },
     pagination: {
       el: ".swiper-pagination",
-
+      clickable:true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (menu[index]) + '</span>';
+      }
     },
     navigation: {
       nextEl: ".swiper-button-next",
