@@ -52,7 +52,7 @@ var swiper = new Swiper(".m_page2_swiper", {
   },
 });
 
-var menu = ["standard","delux","spa","royal"]
+var menu = ["STANDARD","DELUX","SPA","SUITE"]
 var swiper = new Swiper(".page3_swiper", {
     loop:true,
     autoplay: {
